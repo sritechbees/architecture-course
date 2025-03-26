@@ -1,5 +1,6 @@
 
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 function HeroSection() {
@@ -35,9 +36,11 @@ function HeroSection() {
             building design, urban planning, and 3D modeling.
           </p>
           <div className="flex space-x-4 mt-6 justify-center md:justify-start">
+            <Link href="/about">
             <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg text-lg font-medium transition-all shadow-lg">
               Get Started
             </button>
+            </Link>
             <button className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg text-lg font-medium transition-all shadow-lg">
               Certifications
             </button>

@@ -16,11 +16,12 @@ function Topcategories() {
       {/* Section Title */}
       <div className="max-w-6xl mx-auto flex justify-between items-center">
         <h2 className="text-3xl font-bold">Top Categories</h2>
-        <button className="relative overflow-hidden text-orange-500 text-lg border border-orange-500 p-2 rounded-lg font-semibold uppercase transition-all duration-300 
-        before:absolute before:top-0 before:right-0 before:w-0 before:h-full before:bg-white before:transition-all before:duration-300 
-        hover:before:w-full hover:before:left-0 hover:text-orange-500">
-          Top Categories
-        </button>
+        
+        <button className="relative inline-block px-6 py-2 border border-white text-white font-semibold rounded-lg overflow-hidden group mt-4">
+            <span className="absolute inset-0 bg-white transition-all transform scale-x-0 group-hover:scale-x-100 origin-left"></span>
+            <span className="relative text-gray-900 group-hover:text-gray-900 text-white">  Top Categories</span>
+          </button>
+
       </div>
 
       {/* Categories Grid */}

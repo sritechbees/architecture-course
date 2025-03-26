@@ -7,14 +7,16 @@ function Header() {
     <nav className="absolute bg-gray-950 top-0 left-0 w-full flex items-center justify-between px-8 md:px-16 py-4 z-20">
       {/* Logo */}
       <div className="flex items-center space-x-2">
+        <Link href="/">
         <Image 
           src="/home/architecture course logo.png" width={200} height={200}
           alt="Logo"
           className="h-12 rounded-lg"
-        />
+        /> </Link>
         <span className="text-2xl font-bold text-white font-[Poppins]">
           ArchiLearn
         </span>
+       
       </div>
 
       {/* Navigation Links */}
