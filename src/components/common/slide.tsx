@@ -1,11 +1,10 @@
 'use client';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import Image from 'next/image';
 import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
-import { BsArrowRightShort } from 'react-icons/bs';
+
 import { Autoplay, FreeMode, Pagination } from 'swiper/modules';
 import Setupone from './setuptwo';
 import Setup from './setup';

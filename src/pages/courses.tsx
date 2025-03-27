@@ -39,9 +39,54 @@ const courses = [
 function Courses() {
   return (
     <App_layout>
-      <div className="bg-gradient-to-r from-gray-200 via-gray-300 to-gray-400 py-10">
+     <div className="relative h-screen w-full flex flex-col items-center justify-center">
+      <video 
+        className="absolute top-0 left-0 w-full h-full object-cover" 
+        autoPlay 
+        loop 
+        muted
+      >
+        <source src="/about/bgvedio.mp4" type="video/mp4" />
+      </video>
+      <div className="relative z-10 text-center text-white">
+      <motion.h1 
+          className="text-5xl font-bold mb-9"
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ 
+            opacity: 1, 
+            y: 0, 
+            color: ["#002bff", "#00ff00"] 
+          }}
+          transition={{ 
+            duration: 3, 
+            repeat: Infinity, 
+            repeatType: "loop" 
+          }}
+        >
+          Welcome!
+        </motion.h1>  
+        <motion.p 
+          className="text-5xl font-bold mb-5 text-yellow-500"
+          initial={{ opacity: 0, x: -100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1.2, delay: 0.3 }}
+        >
+          Architecture Courses: Master the Art of Design
+        </motion.p>
+        <motion.p 
+          className="mt-2 text-2xl"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.5, delay: 0.6 }}
+        >
+          All the skills you need in one place
+        </motion.p>
+      </div>
+    </div>
+
+      <div className="bg-gradient-to-br from-gray-900 via-gray-200 to-gray-900 py-10">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-extrabold text-center mb-8 text-gray-800">
+          <h2 className="text-4xl font-extrabold text-center mb-12 text-white">
             Architecture Courses: Master the Art of Design
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4">

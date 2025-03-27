@@ -1,34 +1,38 @@
-import Image from 'next/image'
-import React from 'react'
+import React from 'react';
+import Image from 'next/image';
 
 function Evaluatetwo() {
   return (
-    <div className='mb-16'>
- <div className="flex flex-col md:flex-row items-center bg-gray-100 p-6 rounded-xl shadow-lg max-w-4xl mx-auto">
-      <div className="md:w-1/2 p-4">
-        <h2 className="text-2xl font-bold text-gray-800 mb-4">
-          Optimized Corporate Training: A Pathway to Student Success
-        </h2>
-        <p className="text-gray-600">
-          Our corporate training process ensures that students receive hands-on, real-world experience with expert guidance. 
-          We follow a structured learning model that enhances skills, improves efficiency, and prepares students for industry challenges.
-        </p>
-      </div>
-      <div className="md:w-1/2 p-4">
-        <Image
-          src="/about/student.jpg" height={200} width={200}
-          alt="Corporate Training"
-          className="rounded-lg h-64 w-64 shadow-md"
-        />
+    <div className="bg-gray-100 py-12 flex items-center justify-center">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center">
+        {/* Left Content Section */}
+        <div className="md:w-1/2 p-6">
+          <h2 className="text-3xl font-bold text-gray-800 mb-4">Advanced Corporate Architecture Training</h2>
+          <p className="text-gray-600 mb-4">
+            Stay ahead in the architectural industry with our advanced corporate training programs. Gain expertise in 
+            cutting-edge architectural designs, innovative construction methodologies, and smart infrastructure solutions.
+          </p>
+          <ul className="list-disc list-inside text-gray-600">
+            <li>Eco-Friendly and Sustainable Design</li>
+            <li>AI and IoT Integration in Architecture</li>
+            <li>Modern Urban Planning Techniques</li>
+            <li>Next-Gen Construction Technologies</li>
+          </ul>
+        </div>
+        
+        {/* Right Image Section */}
+        <div className="md:w-1/2 p-6 flex justify-center">
+          <Image 
+            src="/about/student.jpg" 
+            width={500} 
+            height={300} 
+            alt="Advanced Corporate Architecture Training" 
+            className="rounded-lg shadow-lg"
+          />
+        </div>
       </div>
     </div>
-
-
-
-
-
-    </div>
-  )
+  );
 }
 
-export default Evaluatetwo
+export default Evaluatetwo;

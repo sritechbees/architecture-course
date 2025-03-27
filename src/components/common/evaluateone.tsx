@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const topics = [
   {
@@ -24,7 +25,7 @@ const topics = [
   },
 ];
 
-export default function evaluateone() {
+export default function Evaluateone() {
   const [selectedTopic, setSelectedTopic] = useState(topics[0]);
 
   return (
@@ -38,8 +39,8 @@ export default function evaluateone() {
           transition={{ duration: 0.6 }}
           className="relative overflow-hidden rounded-xl shadow-xl"
         >
-          <img 
-            src={selectedTopic.image} 
+          <Image
+            src={selectedTopic.image}  height={200} width={200}
             alt={selectedTopic.title} 
             className="w-full h-64 object-cover transform hover:scale-105 transition duration-500"
           />

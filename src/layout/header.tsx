@@ -28,7 +28,7 @@ function Header() {
           <Link href="/courses">Courses</Link>
         </li>
         <li className="hover:text-blue-300 cursor-pointer">
-          <Link href="/corporate-training">Corporate Training</Link>
+          <Link href="/corporatetraining">Corporate Training</Link>
         </li>
         <li className="hover:text-blue-300 cursor-pointer">
           <Link href="/services">Services</Link>
