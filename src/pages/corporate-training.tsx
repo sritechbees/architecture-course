@@ -1,103 +1,108 @@
-import App_layout from '@/layout/app_layout'
-import { motion } from 'framer-motion'  // For animation
-import Image from 'next/image'
-import React from 'react'
+import React from 'react';
+import { Building, Ruler, HardHat,  DraftingCompass, ClipboardList } from 'lucide-react';
+import App_layout from '@/layout/app_layout';
+import CorporateOne from '@/components/common/corporateone';
+import Evaluateskill from '@/components/common/evaluateskill';
+import Evaluateone from '@/components/common/evaluateone';
+import Evaluatetwo from '@/components/common/evaluatetwo';
 
-function Corporate_Training() {
+function CorporateTraining() {
   return (
     <App_layout>
-      <div className="corporate-training-section py-16 mt-10 px-6 md:px-20">
-        
-        {/* Section Title */}
-        <motion.h1
-          className="text-4xl font-extrabold text-center text-gray-800 mb-12 md:text-5xl"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1 }}
-        >
-          Corporate Architecture Training Programs
-        </motion.h1>
+      <CorporateOne />
+      <div className='bg-gradient-to-b from-gray-800 via-gray-600 to-gray-900'>
+        <div className="p-6 max-w-6xl mx-auto font-poppins min-h-screen relative">
+          {/* Starry Background */}
+          <div className="absolute inset-0 overflow-hidden z-0">
+            {[...Array(100)].map((_, i) => (
+              <div
+                key={i}
+                className="absolute bg-white rounded-full opacity-75 animate-twinkle"
+                style={{
+                  top: `${Math.random() * 100}%`,
+                  left: `${Math.random() * 100}%`,
+                  width: `${Math.random() * 3 + 1}px`,
+                  height: `${Math.random() * 3 + 1}px`,
+                }}
+              />
+            ))}
+          </div>
+          {/* Title Section */}
+          <h1 className="text-4xl font-bold text-center text-white mt-5 z-10 relative">
+            Advance Your Career with Architecture & Corporate Training Courses
+          </h1>
 
-        {/* Training Programs Description */}
-        <motion.p
-          className="text-xl text-center text-gray-600 mb-8"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1.5, delay: 0.5 }}
-        >
-          Enhance your team&apos;s skills with our specialized architecture training programs designed for corporate needs.
-        </motion.p>
-
-        {/* Training Programs Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-
-          {/* Training 1 */}
-          <motion.div
-            className="training-card bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 0.5 }}
-          >
-            <Image
-              src="/corporatetraining/Smart Building Technologies.jpg"  height={200} width={200}// Replace with your image path
-              alt="Urban Design Training"
-              className="w-full h-48 object-cover"
-            />
-            <div className="p-6">
-              <h3 className="text-2xl font-semibold text-gray-800">Urban Design for Corporations</h3>
-              <p className="text-sm text-gray-500 mt-2">Develop sustainable and innovative urban designs for modern cities.</p>
-              <p className="text-lg text-gray-700 mt-4">
-                This course will teach teams how to approach urban planning and design with a focus on sustainability and scalability.
-              </p>
+          {/* Features Section */}
+          <div className="grid gap-8 md:grid-cols-3 lg:grid-cols-5 mt-28 z-10 relative">
+            {/* Architectural Design */}
+            <div className="flex flex-col items-center justify-center bg-white shadow-lg rounded-2xl p-6 animate-rotate">
+              <Building className="text-indigo-500 w-16 h-16 mb-4" />
+              <div className="text-center">
+                <h3 className="text-xl font-semibold mb-2">Architectural Design</h3>
+                <p className="text-gray-600">Master modern and classical architectural styles.</p>
+              </div>
             </div>
-          </motion.div>
 
-          {/* Training 2 */}
-          <motion.div
-            className="training-card bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 0.7 }}
-          >
-            <Image
-              src="/corporatetraining/Smart Building Technologies.jpg" height={200} width={200} // Replace with your image path
-              alt="Sustainable Architecture Training"
-              className="w-full h-48 object-cover"
-            />
-            <div className="p-6">
-              <h3 className="text-2xl font-semibold text-gray-800">Sustainable Architecture for Enterprises</h3>
-              <p className="text-sm text-gray-500 mt-2">Learn eco-friendly techniques for modern corporate and residential buildings.</p>
-              <p className="text-lg text-gray-700 mt-4">
-                This training focuses on the principles of sustainable design, energy efficiency, and the integration of green technologies.
-              </p>
+            {/* Blueprint Mastery */}
+            <div className="flex flex-col items-center justify-center bg-white shadow-lg rounded-2xl p-6 animate-rotate">
+              <DraftingCompass className="text-blue-500 w-16 h-16 mb-4" />
+              <div className="text-center">
+                <h3 className="text-xl font-semibold mb-2">Blueprint Mastery</h3>
+                <p className="text-gray-600">Learn to create, analyze, and interpret blueprints.</p>
+              </div>
             </div>
-          </motion.div>
 
-          {/* Training 3 */}
-          <motion.div
-            className="training-card bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 0.9 }}
-          >
-            <Image
-              src="/corporatetraining/Smart Building Technologies.jpg" height={200} width={200} // Replace with your image path
-              alt="Smart Building Technologies"
-              className="w-full h-48 object-cover"
-            />
-            <div className="p-6">
-              <h3 className="text-2xl font-semibold text-gray-800">Smart Building Technologies for Corporations</h3>
-              <p className="text-sm text-gray-500 mt-2">Innovate your architectural designs with the latest smart technologies for buildings.</p>
-              <p className="text-lg text-gray-700 mt-4">
-                Equip your team with the skills to incorporate IoT, automation, and smart systems into building design and management.
-              </p>
+            {/* Measurement & Precision */}
+            <div className="flex flex-col items-center justify-center bg-white shadow-lg rounded-2xl p-6 animate-rotate">
+              <Ruler className="text-green-500 w-16 h-16 mb-4" />
+              <div className="text-center">
+                <h3 className="text-xl font-semibold mb-2">Measurement & Precision</h3>
+                <p className="text-gray-600">Enhance accuracy with professional measuring techniques.</p>
+              </div>
             </div>
-          </motion.div>
 
+            {/* Construction Safety */}
+            <div className="flex flex-col items-center justify-center bg-white shadow-lg rounded-2xl p-6 animate-rotate">
+              <HardHat className="text-yellow-500 w-16 h-16 mb-4" />
+              <div className="text-center">
+                <h3 className="text-xl font-semibold mb-2">Construction Safety</h3>
+                <p className="text-gray-600">Ensure safety protocols are followed in every project.</p>
+              </div>
+            </div>
+
+           
+
+            {/* Project Management */}
+            <div className="flex flex-col items-center justify-center bg-white shadow-lg rounded-2xl p-6 animate-rotate">
+              <ClipboardList className="text-red-500 w-16 h-16 mb-4" />
+              <div className="text-center">
+                <h3 className="text-xl font-semibold mb-2">Project Management</h3>
+                <p className="text-gray-600">Master project planning and execution techniques.</p>
+              </div>
+            </div>
+          </div>
+
+          {/* CSS Animations */}
+          <style jsx>{`
+            .animate-rotate {
+              animation: rotate 6s infinite linear;
+            }
+            @keyframes rotate {
+              0% {
+                transform: rotate(-20deg);
+              }
+              100% {
+                transform: rotate(50deg);
+              }
+            }
+          `}</style>
         </div>
       </div>
+      <Evaluateskill/>
+      <Evaluateone/>
+    <Evaluatetwo/>
     </App_layout>
-  )
+  );
 }
 
-export default Corporate_Training
+export default CorporateTraining;

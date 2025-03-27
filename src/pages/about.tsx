@@ -103,7 +103,7 @@ function About() {
         </motion.div>
 
         {/* Future Architecture Trends Section with AOS Animation */}
-        <div className="future-trends bg-white py-10 px-6 mt-16 rounded-lg shadow-lg text-center" data-aos="fade-up">
+        <div className="future-trends bg-gradient-to-r from-blue-500 via-blue-400 to-blue-300 py-10 px-6 mt-16 rounded-lg shadow-lg text-center" data-aos="fade-up">
           <h2 className="text-3xl font-bold text-gray-800 mb-4" data-aos="zoom-in">
             Future Architecture Trends
           </h2>

@@ -7,20 +7,11 @@ function HeroSection() {
   return (
     <div>
    
-    <div className="relative w-full h-screen flex items-center justify-center px-8 md:px-16">
+    <div className="relative w-full py-20 flex items-center justify-center px-8 md:px-16">
       
 
 
-    <video
-  autoPlay
-  loop
-  muted
-  playsInline
-  className="absolute top-0 left-0 w-full h-full object-cover pointer-events-none"
->
-  <source src="/home/bgvedio.mp4" type="video/mp4" />
-</video>
-
+   
       {/* Dark Overlay for Readability */}
       <div className="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
 

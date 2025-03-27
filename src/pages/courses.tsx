@@ -1,162 +1,94 @@
-import App_layout from '@/layout/app_layout'
-import { motion } from 'framer-motion'
-import Image from 'next/image'
-import React from 'react'
+import App_layout from '@/layout/app_layout';
+import { motion } from 'framer-motion';
+import Image from 'next/image';
+import React from 'react';
+
+const courses = [
+  {
+    title: 'Urban Design',
+    description: 'Master the art of designing spaces that integrate modernity and functionality. Learn key strategies for urban planning and development.',
+    image: '/courses/Architectural Visualization.jpg',
+  },
+  {
+    title: 'Sustainable Architecture',
+    description: 'Learn eco-friendly design techniques that reduce environmental impact. Discover innovative materials and energy-efficient solutions.',
+    image: '/courses/Architectural Visualization.jpg',
+  },
+  {
+    title: 'Modern Architectural Styles',
+    description: 'Discover contemporary trends that are shaping the architecture of the future. Explore minimalism, industrial design, and beyond.',
+    image: '/courses/Architectural Visualization.jpg',
+  },
+  {
+    title: 'Architectural Visualization',
+    description: 'Learn to present your designs effectively with 3D modeling and rendering techniques. Improve your skills in realistic architectural presentation.',
+    image: '/courses/Architectural Visualization.jpg',
+  },
+  {
+    title: 'Smart Cities & Tech',
+    description: 'Explore how technology is transforming urban environments and architecture. Understand IoT, automation, and AI in city planning.',
+    image: '/courses/Architectural Visualization.jpg',
+  },
+  {
+    title: 'Building Info Modeling',
+    description: 'Learn BIM techniques to optimize construction processes and building management. Enhance efficiency in architecture and engineering.',
+    image: '/courses/Architectural Visualization.jpg',
+  },
+];
 
 function Courses() {
   return (
     <App_layout>
-      <div className="courses-section py-16 mt-10 px-6 md:px-20">
-        {/* Section Title */}
-        <motion.h1
-          className="text-4xl font-extrabold text-center text-gray-800 mb-12 md:text-5xl"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1 }}
-        >
-          Architecture Courses: Master the Art of Design
-        </motion.h1>
-
-        <motion.p
-          className="text-xl text-center text-gray-600 mb-8"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1.5, delay: 0.5 }}
-        >
-          Explore our curated courses that blend innovative design, sustainable architecture, and the future of urban spaces.
-        </motion.p>
-
-        {/* Courses Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8">
-          {/* Course 1 */}
-          <motion.div
-            className="course-card bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 0.5 }}
-          >
-            <Image
-              src="/courses/Architectural Visualization.jpg" height={200} width={200} // Replace with actual image path
-              alt="Urban Design"
-              className="w-full h-48 object-cover"
-            />
-            <div className="p-6">
-              <h3 className="text-2xl font-semibold text-gray-800">Urban Design Principles</h3>
-              <p className="text-sm text-gray-500 mt-2">Master the art of designing spaces that integrate modernity and functionality.</p>
-              <p className="text-lg text-gray-700 mt-4">
-                Learn how to design urban spaces that cater to the needs of growing cities while maintaining sustainability and beauty.
-              </p>
-            </div>
-          </motion.div>
-
-          {/* Course 2 */}
-          <motion.div
-            className="course-card bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 0.7 }}
-          >
-            <Image
-              src="/courses/Architectural Visualization.jpg" height={200} width={200} // Replace with actual image path
-              alt="Sustainable Architecture"
-              className="w-full h-48 object-cover"
-            />
-            <div className="p-6">
-              <h3 className="text-2xl font-semibold text-gray-800">Sustainable Architecture</h3>
-              <p className="text-sm text-gray-500 mt-2">Learn eco-friendly design techniques that reduce environmental impact.</p>
-              <p className="text-lg text-gray-700 mt-4">
-                Explore the world of sustainable architecture and how you can design buildings with minimal carbon footprint.
-              </p>
-            </div>
-          </motion.div>
-
-          {/* Course 3 */}
-          <motion.div
-            className="course-card bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 0.9 }}
-          >
-            <Image
-              src="/courses/Architectural Visualization.jpg" height={200} width={200} // Replace with actual image path
-              alt="Modern Architectural Styles"
-              className="w-full h-48 object-cover"
-            />
-            <div className="p-6">
-              <h3 className="text-2xl font-semibold text-gray-800">Modern Architectural Styles</h3>
-              <p className="text-sm text-gray-500 mt-2">Discover contemporary trends that are shaping the architecture of the future.</p>
-              <p className="text-lg text-gray-700 mt-4">
-                Dive into modern architectural styles, including minimalism, industrial design, and the future of aesthetics.
-              </p>
-            </div>
-          </motion.div>
-
-          {/* Course 4 */}
-          <motion.div
-            className="course-card bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 1.1 }}
-          >
-            <Image
-              src="/courses/Architectural Visualization.jpg" height={200} width={200}// Replace with actual image path
-              alt="Architectural Visualization"
-              className="w-full h-48 object-cover"
-            />
-            <div className="p-6">
-              <h3 className="text-2xl font-semibold text-gray-800">Architectural Visualization</h3>
-              <p className="text-sm text-gray-500 mt-2">Learn to present your designs effectively with 3D modeling and rendering techniques.</p>
-              <p className="text-lg text-gray-700 mt-4">
-                Master the art of architectural visualization and bring your designs to life with realistic renderings.
-              </p>
-            </div>
-          </motion.div>
-
-          {/* Course 5 */}
-          <motion.div
-            className="course-card bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 1.3 }}
-          >
-            <Image
-              src="/courses/Architectural Visualization.jpg" height={200} width={200}// Replace with actual image path
-              alt="Smart Cities and Technology"
-              className="w-full h-48 object-cover"
-            />
-            <div className="p-6">
-              <h3 className="text-2xl font-semibold text-gray-800">Smart Cities & Technology</h3>
-              <p className="text-sm text-gray-500 mt-2">Explore how technology is transforming urban environments and architecture.</p>
-              <p className="text-lg text-gray-700 mt-4">
-                Get insights into smart cities, from IoT integration to automated buildings, and how they will shape the future.
-              </p>
-            </div>
-          </motion.div>
-
-          {/* Course 6 */}
-          <motion.div
-            className="course-card bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 1.5 }}
-          >
-            <Image
-              src="/courses/Architectural Visualization.jpg" height={200} width={200}// Replace with actual image path
-              alt="Building Information Modeling"
-              className="w-full h-48 object-cover"
-            />
-            <div className="p-6">
-              <h3 className="text-2xl font-semibold text-gray-800">Building Information Modeling</h3>
-              <p className="text-sm text-gray-500 mt-2">Learn BIM techniques to optimize construction processes and building management.</p>
-              <p className="text-lg text-gray-700 mt-4">
-                Understand the process of Building Information Modeling (BIM) and its applications in modern construction.
-              </p>
-            </div>
-          </motion.div>
+      <div className="bg-gradient-to-r from-gray-200 via-gray-300 to-gray-400 py-10">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl font-extrabold text-center mb-8 text-gray-800">
+            Architecture Courses: Master the Art of Design
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
+            {courses.map((course, index) => (
+              <motion.div
+                key={index}
+                className="relative bg-white p-6 shadow-xl rounded-lg border border-gray-200 overflow-hidden group transition-transform duration-300 transform hover:scale-105 hover:shadow-2xl"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1, delay: index * 0.2 }}
+              >
+                {/* Gradient Overlays */}
+                <div className="absolute inset-0 bg-gradient-to-tr from-gray-400 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-cyan-500 transform translate-y-full group-hover:translate-y-0 transition-transform duration-1000"></div>
+                
+                {/* Image Section with Hover Effect */}
+                <div className="relative overflow-hidden rounded-lg mb-4">
+                  <Image
+                    src={course.image}
+                    alt={course.title}
+                    height={500}
+                    width={500}
+                    className="w-full h-48 object-cover transform transition-transform duration-300 group-hover:scale-110"
+                  />
+                </div>
+                
+                {/* Card Content */}
+                <div className="relative z-10 text-center">
+                  <h3 className="text-xl font-semibold text-gray-700 mb-2 group-hover:text-white transition-colors duration-300 truncate">
+                    {course.title}
+                  </h3>
+                  <p className="text-gray-600 group-hover:text-gray-200 transition-colors duration-300 mb-4 line-clamp-3">
+                    {course.description}
+                  </p>
+                  <button className="relative px-4 py-2 font-semibold rounded-lg overflow-hidden bg-blue-600 text-white transition-all duration-300 group">
+                    <span className="absolute inset-0 bg-gradient-to-tr from-gray-400 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                    <span className="absolute inset-0 bg-gradient-to-r from-orange-500 to-cyan-500 transform translate-y-full group-hover:translate-y-0 transition-transform duration-1000"></span>
+                    <span className="relative z-10">Read More</span>
+                  </button>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </App_layout>
-  )
+  );
 }
 
-export default Courses
+export default Courses;
