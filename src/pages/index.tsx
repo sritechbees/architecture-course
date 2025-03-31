@@ -1,6 +1,7 @@
 
 
 
+import CardDesign from "@/components/common/card_design";
 import Slide from "@/components/common/slide";
 import HeroSection from "@/home/herosection";
 import Our_training_services from "@/home/our_training_services";
@@ -17,6 +18,7 @@ export default function Home() {
       <HeroSection/>
       <Topcategories/>
       <Our_training_services/>
+      <CardDesign/>
       <Footer/>
          </div>
   );

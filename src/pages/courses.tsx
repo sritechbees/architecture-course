@@ -2,37 +2,44 @@ import App_layout from '@/layout/app_layout';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import React from 'react';
+import Link from 'next/link';
 
 const courses = [
   {
     title: 'Urban Design',
     description: 'Master the art of designing spaces that integrate modernity and functionality. Learn key strategies for urban planning and development.',
     image: '/courses/Architectural Visualization.jpg',
+    link:"/urbandesign/urban_description",
   },
   {
     title: 'Sustainable Architecture',
     description: 'Learn eco-friendly design techniques that reduce environmental impact. Discover innovative materials and energy-efficient solutions.',
     image: '/courses/Architectural Visualization.jpg',
+    link:"/urbandesign/urban_description",
   },
   {
     title: 'Modern Architectural Styles',
     description: 'Discover contemporary trends that are shaping the architecture of the future. Explore minimalism, industrial design, and beyond.',
     image: '/courses/Architectural Visualization.jpg',
+    link:"/urbandesign/urban_description",
   },
   {
     title: 'Architectural Visualization',
     description: 'Learn to present your designs effectively with 3D modeling and rendering techniques. Improve your skills in realistic architectural presentation.',
     image: '/courses/Architectural Visualization.jpg',
+    link:"/urbandesign/urban_description",
   },
   {
     title: 'Smart Cities & Tech',
     description: 'Explore how technology is transforming urban environments and architecture. Understand IoT, automation, and AI in city planning.',
     image: '/courses/Architectural Visualization.jpg',
+    link:"/urbandesign/urban_description",
   },
   {
     title: 'Building Info Modeling',
     description: 'Learn BIM techniques to optimize construction processes and building management. Enhance efficiency in architecture and engineering.',
     image: '/courses/Architectural Visualization.jpg',
+    link:"/urbandesign/urban_description",
   },
 ];
 
@@ -121,11 +128,13 @@ function Courses() {
                   <p className="text-gray-600 group-hover:text-gray-200 transition-colors duration-300 mb-4 line-clamp-3">
                     {course.description}
                   </p>
-                  <button className="relative px-4 py-2 font-semibold rounded-lg overflow-hidden bg-blue-600 text-white transition-all duration-300 group">
-                    <span className="absolute inset-0 bg-gradient-to-tr from-gray-400 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-                    <span className="absolute inset-0 bg-gradient-to-r from-orange-500 to-cyan-500 transform translate-y-full group-hover:translate-y-0 transition-transform duration-1000"></span>
-                    <span className="relative z-10">Read More</span>
-                  </button>
+                  <Link href={course.link} className="relative px-4 py-2 font-semibold rounded-lg bg-blue-600 text-white transition-all duration-300 group hover:bg-blue-700">
+                  <span className="absolute border border-white rounded-lg inset-0 bg-gradient-to-tr from-orange-600 to-cyan-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                
+                    <span className='relative z-10'>Read More</span>
+                  </Link>
+
+                 
                 </div>
               </motion.div>
             ))}

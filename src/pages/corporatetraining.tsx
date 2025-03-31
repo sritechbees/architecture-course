@@ -8,6 +8,7 @@ import Evaluatetwo from '@/components/common/evaluatetwo';
 
 function CorporateTraining() {
   return (
+    <div className=''>
     <App_layout>
       <CorporateOne />
       <div className='bg-gradient-to-b from-gray-800 via-gray-600 to-gray-900'>
@@ -100,8 +101,9 @@ function CorporateTraining() {
       </div>
       <Evaluateskill/>
       <Evaluateone/>
-    <Evaluatetwo/>
+    <Evaluatetwo/> 
     </App_layout>
+    </div>
   );
 }
 

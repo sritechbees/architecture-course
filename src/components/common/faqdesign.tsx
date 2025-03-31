@@ -81,7 +81,7 @@ const ArchitectureFaq = () => {
           </div>
         </div>
 
-        <div className="lg:w-1/2 bg-white shadow-lg rounded-lg p-8 mb-8 lg:mb-0 lg:mr-6">
+        <div className="lg:w-1/2 bg-white shadow-lg rounded-lg p-8 mb-8 lg:mb-0 max-sm:mt-5 max-lg:mt-5 max-xl:ml-5 lg:mr-6">
          <Image src="/about/faq.jpg" className="h-[385] w-[550px]" height={200} width={200} alt="faqimage" />
         </div>
 
