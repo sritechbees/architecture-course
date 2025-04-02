@@ -15,13 +15,13 @@ const courses = [
     title: 'Sustainable Architecture',
     description: 'Learn eco-friendly design techniques that reduce environmental impact. Discover innovative materials and energy-efficient solutions.',
     image: '/courses/Architectural Visualization.jpg',
-    link:"/urbandesign/urban_description",
+    link:"/sustainable_architecture/whychoose_sustainable",
   },
   {
     title: 'Modern Architectural Styles',
     description: 'Discover contemporary trends that are shaping the architecture of the future. Explore minimalism, industrial design, and beyond.',
     image: '/courses/Architectural Visualization.jpg',
-    link:"/urbandesign/urban_description",
+    link: '/modern_architectural/mordern_description',
   },
   {
     title: 'Architectural Visualization',

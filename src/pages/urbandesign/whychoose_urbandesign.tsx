@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 import Link from 'next/link';
 
 export default function UrbanDesignCourse() {
@@ -7,11 +6,19 @@ export default function UrbanDesignCourse() {
     <div className="relative w-full bg-gray-900 text-white py-36   px-6 md:px-16 flex flex-col items-center">
       {/* Background Image */}
       <div className="absolute inset-0">
-        <Image
+        {/* <Image
           src="/courses/urbanbg.jpg" height={200} width={200} 
           alt="Background" 
           className="w-full h-full object-cover opacity-30"
-        />
+        /> */}
+         <video 
+            src="/courses/urbanbg.mp4"
+            className="w-full h-full object-cover opacity-50 rounded-2xl"
+            autoPlay
+            loop
+            muted
+            
+          />
       </div>
       
       {/* Content Container */}
