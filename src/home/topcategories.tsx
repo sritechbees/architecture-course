@@ -12,35 +12,45 @@ const categories = [
 
 function Topcategories() {
   return (
-    <div className="bg-gray-900 text-white py-12 px-6">
+    <div className="bg-gray-900 text-white py-12 px-4 sm:px-6 lg:px-8">
       {/* Section Title */}
-      <div className="max-w-6xl mx-auto flex justify-between items-center">
-        <h2 className="text-3xl font-bold">Top Categories</h2>
-        
-        <button className="relative inline-block px-6 py-2 border border-white text-white font-semibold rounded-lg overflow-hidden group mt-4">
-            <span className="absolute inset-0 bg-white transition-all transform scale-x-0 group-hover:scale-x-100 origin-left"></span>
-            <span className="relative text-gray-900 group-hover:text-gray-900 text-white">  Top Categories</span>
-          </button>
-
+      <div className="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
+        <h2 className="text-3xl text-yellow-500 font-bold">Top Categories</h2>
+        <button className="relative inline-block px-6 py-2 border border-white text-white font-semibold rounded-lg overflow-hidden group">
+          <span className="absolute inset-0 bg-yellow-500 transition-all transform scale-x-0 group-hover:scale-x-100 origin-left duration-300"></span>
+          <span className="relative text-yellow-500 group-hover:text-white transition-colors duration-300">
+            View All
+          </span>
+        </button>
       </div>
 
       {/* Categories Grid */}
-      <div className="flex gap-6 max-w-6xl mx-auto mt-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto mt-10">
         {categories.map((category) => (
-          <div key={category.id} className="relative group flex items-center justify-center 
-              h-64 w-64 bg-gray-800 rounded-lg p-4 hover:bg-gray-700 transition overflow-hidden">
+          <div
+            key={category.id}
+            className="relative group flex items-center justify-center h-64 bg-gray-800 rounded-lg p-4 hover:bg-gray-700 transition overflow-hidden"
+          >
             {/* Icon & Title */}
             <div className="text-center relative z-10">
-              <div className="text-3xl">{category.icon}</div>
-              <h3 className="text-lg font-semibold">{category.title}</h3>
-              <p className="text-sm text-gray-400">{category.courses} Courses</p>
+              <div className="text-3xl mb-2">{category.icon}</div>
+              <h3 className="text-lg text-yellow-500 font-semibold">{category.title}</h3>
+              <p className="text-sm text-white">{category.courses} Courses</p>
             </div>
 
             {/* Hover Effect with Image */}
-            <div className={`absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center
-              opacity-0 group-hover:opacity-100 transition-all duration-500 ${getHoverEffect(category.hoverEffect)}`}>
-              <Image src={category.img} height={200} width={200} alt={category.title} className="w-full h-full object-cover" />
-              <button className="absolute bottom-4 bg-red-500 text-white px-3 py-1 rounded">
+            <div
+              className={`absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center
+                opacity-0 group-hover:opacity-100 transition-all duration-500 ${getHoverEffect(category.hoverEffect)}`}
+            >
+              <Image
+                src={category.img}
+                height={200}
+                width={200}
+                alt={category.title}
+                className="w-full h-full object-cover"
+              />
+              <button className="absolute bottom-4 bg-yellow-500 text-white px-3 py-1 rounded">
                 Course Preview
               </button>
             </div>
@@ -51,8 +61,8 @@ function Topcategories() {
   );
 }
 
-// Function to return hover effects
-function getHoverEffect(effect:string) {
+// Hover effect transitions
+function getHoverEffect(effect: string) {
   switch (effect) {
     case "left-to-right":
       return "transform -translate-x-full group-hover:translate-x-0";

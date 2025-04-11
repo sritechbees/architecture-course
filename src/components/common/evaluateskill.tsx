@@ -6,7 +6,7 @@ function Evaluateskill() {
     <div className='p-6 max-w-7xl mx-auto font-poppins min-h-screen bg-gray-100 flex flex-col lg:flex-row items-center'>
       {/* Left Side - Text Content */}
       <div className='w-full lg:w-1/2 p-6'>
-        <h1 className='text-3xl font-bold text-gray-800 mb-8'>Evaluate Your Skills in Architecture</h1>
+        <h1 className='text-3xl font-bold text-gray-800 mb-8'>Evaluate Your <span className='text-yellow-500'>Skills in Architecture</span></h1>
         
         <div className='space-y-6'>
           {/* Design Principles */}

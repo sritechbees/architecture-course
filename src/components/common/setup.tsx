@@ -5,13 +5,13 @@ import Image from 'next/image';
 import { PlayCircle } from 'lucide-react';
 function Setup() {
   return (
-    <div className='relative w-full h-[500px] flex items-center justify-center'>
+    <div className='relative w-[1200px] h-[500px] mt-10 ml-7 flex items-center justify-start px-16'>
       <Image 
         src='/home/banner5.jpg' 
         alt='Setup Background' 
         layout='fill' 
         objectFit='cover' 
-        className='absolute inset-0 w-full h-full' 
+        className='absolute inset-0 w-full h-full rounded-2xl' 
       />
       <div className='relative z-10 text-center ml-96 text-gray-900 p-6  rounded-md'>
         <h1 className='text-6xl font-bold'>Setup Your Architecture Course</h1>

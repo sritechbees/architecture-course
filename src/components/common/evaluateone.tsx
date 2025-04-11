@@ -37,12 +37,12 @@ export default function Evaluateone() {
           initial={{ opacity: 0, scale: 0.9 }} 
           animate={{ opacity: 1, scale: 1 }} 
           transition={{ duration: 0.6 }}
-          className="relative overflow-hidden rounded-xl shadow-xl"
+          className="relative overflow-hidden  rounded-xl shadow-2xl"
         >
           <Image
             src={selectedTopic.image}  height={200} width={200}
             alt={selectedTopic.title} 
-            className="w-full h-64 object-cover transform hover:scale-105 transition duration-500"
+            className="w-full h-96 object-cover transform hover:scale-105 transition duration-500"
           />
         </motion.div>
 
@@ -55,7 +55,7 @@ export default function Evaluateone() {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className={`p-4 text-left font-semibold rounded-lg transition duration-300 shadow-md cursor-pointer ${selectedTopic.title === topic.title ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-800 hover:bg-blue-500 hover:text-white'}`}
+              className={`p-4 text-left font-semibold rounded-lg transition duration-300 shadow-md cursor-pointer ${selectedTopic.title === topic.title ? 'bg-yellow-500 text-white' : 'bg-gray-200 text-gray-800 hover:bg-yellow-500 hover:text-white'}`}
             >
               {topic.title}
             </motion.button>

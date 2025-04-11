@@ -6,6 +6,7 @@ import { useEffect } from 'react';
 import Image from 'next/image';
 import Portfolio from '@/components/common/portpolio';
 
+
 const services = [
   {
     title: 'Architectural Design',
@@ -53,20 +54,21 @@ function Services() {
   return (
     <App_layout>
     
-        <Portfolio/>
-      
+    
+     
       <div className=' max-w-7xl m-auto py-16 mt-10 px-8 bg-gray-100'>
-        <h2 className='text-3xl font-bold text-center mb-10'>Our Architecture Services</h2>
+        <h2 className='text-3xl font-bold text-center mb-10'>Our <span className="text-yellow-500">Architecture</span>  Services</h2>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
           {services.map((service, index) => (
             <div key={index} data-aos={service.animation} className='bg-white p-6 rounded-2xl shadow-lg'>
               <Image src={service.image} height={200} width={200} alt={service.title} className='w-full h-56 object-cover rounded-xl mb-4' />
-              <h3 className='text-xl font-semibold mb-2'>{service.title}</h3>
-              <p className='text-gray-600'>{service.description}</p>
+              <h3 className='text-xl font-semibold text-yellow-500 mb-2'>{service.title}</h3>
+              <p className='text-gray-900'>{service.description}</p>
             </div>
           ))}
         </div>
       </div>
+      <Portfolio/>
     </App_layout>
   );
 }

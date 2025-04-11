@@ -43,10 +43,13 @@ function Header() {
           <Link href="/courses">Courses</Link>
         </li>
         <li className="hover:text-blue-300 cursor-pointer px-6 py-2 md:p-0">
-          <Link href="/corporatetraining">Corporate Training</Link>
+          <Link href="/corporatetraining">Internship</Link>
         </li>
         <li className="hover:text-blue-300 cursor-pointer px-6 py-2 md:p-0">
           <Link href="/services">Services</Link>
+        </li>
+        <li className="hover:text-blue-300 cursor-pointer px-6 py-2 md:p-0">
+          <Link href="/services">Blogs</Link>
         </li>
         <li className="hover:text-blue-300 cursor-pointer px-6 py-2 md:p-0">
           <Link href="/contact">Contact Us</Link>

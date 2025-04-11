@@ -1,7 +1,4 @@
-
-
-
-import CardDesign from "@/components/common/card_design";
+ import Offer from "@/components/common/offer";
 import Slide from "@/components/common/slide";
 import Certificate from "@/home/certificate";
 import HeroSection from "@/home/herosection";
@@ -19,9 +16,9 @@ export default function Home() {
       <HeroSection/>
       <Topcategories/>
       <Our_training_services/>
+      <Offer/>
       <Certificate/>
-      <CardDesign/>
-      <Footer/>
+          <Footer/>
          </div>
   );
 }

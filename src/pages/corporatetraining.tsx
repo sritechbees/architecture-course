@@ -30,26 +30,26 @@ function CorporateTraining() {
           </div>
           {/* Title Section */}
           <h1 className="text-4xl font-bold text-center text-white mt-5 z-10 relative">
-            Advance Your Career with Architecture & Corporate Training Courses
+            Advance Architecture<span className='text-yellow-500'> & Corporate</span>  Training Courses
           </h1>
 
           {/* Features Section */}
           <div className="grid gap-8 md:grid-cols-3 lg:grid-cols-5 mt-28 z-10 relative">
             {/* Architectural Design */}
             <div className="flex flex-col items-center justify-center bg-white shadow-lg rounded-2xl p-6 animate-rotate">
-              <Building className="text-indigo-500 w-16 h-16 mb-4" />
+              <Building className="text-cyan-500 w-16 h-16 mb-4" />
               <div className="text-center">
-                <h3 className="text-xl font-semibold mb-2">Architectural Design</h3>
-                <p className="text-gray-600">Master modern and classical architectural styles.</p>
+                <h3 className="text-xl font-semibold text-yellow-500 mb-2">Architectural Design</h3>
+                <p className="text-gray-900">Master modern and classical architectural styles.</p>
               </div>
             </div>
 
             {/* Blueprint Mastery */}
             <div className="flex flex-col items-center justify-center bg-white shadow-lg rounded-2xl p-6 animate-rotate">
-              <DraftingCompass className="text-blue-500 w-16 h-16 mb-4" />
+              <DraftingCompass className="text-purple-500 w-16 h-16 mb-4" />
               <div className="text-center">
-                <h3 className="text-xl font-semibold mb-2">Blueprint Mastery</h3>
-                <p className="text-gray-600">Learn to create, analyze, and interpret blueprints.</p>
+                <h3 className="text-xl font-semibold text-blue-500 mb-2">Blueprint Mastery</h3>
+                <p className="text-gray-900">Learn to create, analyze, and interpret blueprints.</p>
               </div>
             </div>
 
@@ -57,16 +57,16 @@ function CorporateTraining() {
             <div className="flex flex-col items-center justify-center bg-white shadow-lg rounded-2xl p-6 animate-rotate">
               <Ruler className="text-green-500 w-16 h-16 mb-4" />
               <div className="text-center">
-                <h3 className="text-xl font-semibold mb-2">Measurement & Precision</h3>
-                <p className="text-gray-600">Enhance accuracy with professional measuring techniques.</p>
+                <h3 className="text-xl font-semibold text-yellow-500 mb-2">Measurement & Precision</h3>
+                <p className="text-gray-900">Enhance accuracy with professional measuring techniques.</p>
               </div>
             </div>
 
             {/* Construction Safety */}
             <div className="flex flex-col items-center justify-center bg-white shadow-lg rounded-2xl p-6 animate-rotate">
-              <HardHat className="text-yellow-500 w-16 h-16 mb-4" />
+              <HardHat className="text-blue-500 w-16 h-16 mb-4" />
               <div className="text-center">
-                <h3 className="text-xl font-semibold mb-2">Construction Safety</h3>
+                <h3 className="text-xl font-semibold text-fuchsia-500 mb-2">Construction Safety</h3>
                 <p className="text-gray-600">Ensure safety protocols are followed in every project.</p>
               </div>
             </div>
@@ -75,10 +75,10 @@ function CorporateTraining() {
 
             {/* Project Management */}
             <div className="flex flex-col items-center justify-center bg-white shadow-lg rounded-2xl p-6 animate-rotate">
-              <ClipboardList className="text-red-500 w-16 h-16 mb-4" />
+              <ClipboardList className="text-orange-500 w-16 h-16 mb-4" />
               <div className="text-center">
-                <h3 className="text-xl font-semibold mb-2">Project Management</h3>
-                <p className="text-gray-600">Master project planning and execution techniques.</p>
+                <h3 className="text-xl font-semibold text-yellow-500 mb-2">Project Management</h3>
+                <p className="text-gray-900">Master project planning and execution techniques.</p>
               </div>
             </div>
           </div>

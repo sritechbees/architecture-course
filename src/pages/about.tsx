@@ -17,6 +17,7 @@ function About() {
 
   return (
     <App_layout>
+
        <MissionVision/>
        <Reasonchoose/>
        <Testimonial/>
@@ -28,7 +29,7 @@ function About() {
 
       
         <motion.h1
-          className="about-heading text-4xl font-extrabold text-center text-blue-500 mb-6 md:text-5xl"
+          className="about-heading text-4xl font-extrabold text-center text-yellow-500 mb-6 md:text-4xl"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
@@ -66,7 +67,7 @@ function About() {
           <motion.img
             src="/about/modern architectural.jpg"
             alt="Modern Architecture"
-            className="image-gallery-item object-cover w-full h-72 rounded-lg shadow-lg"
+            className="image-gallery-item object-cover border-white border-2 w-full h-72 rounded-lg shadow-lg"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.2, delay: 1.2 }}
@@ -74,7 +75,7 @@ function About() {
           <motion.img
             src="/about/Sustainable Architecture.jpg"
             alt="Sustainable Architecture"
-            className="image-gallery-item object-cover w-full h-72 rounded-lg shadow-lg"
+            className="image-gallery-item object-cover  border-white border-2 w-full h-72 rounded-lg shadow-lg"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.2, delay: 1.5 }}
@@ -82,7 +83,7 @@ function About() {
           <motion.img
             src="/about/Urban Architecture.jpg"
             alt="Urban Architecture"
-            className="image-gallery-item object-cover w-full h-72 rounded-lg shadow-lg"
+            className="image-gallery-item object-cover border-white border-2 w-full h-72 rounded-lg shadow-lg"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.2, delay: 1.8 }}
@@ -103,7 +104,7 @@ function About() {
         </motion.div>
 
         {/* Future Architecture Trends Section with AOS Animation */}
-        <div className="future-trends bg-gradient-to-r from-blue-500 via-blue-400 to-blue-300 py-10 px-6 mt-16 rounded-lg shadow-lg text-center" data-aos="fade-up">
+        <div className="future-trends bg-white py-10 px-6 mt-16 rounded-lg shadow-lg text-center" data-aos="fade-up">
           <h2 className="text-3xl font-bold text-gray-800 mb-4" data-aos="zoom-in">
             Future Architecture Trends
           </h2>

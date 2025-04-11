@@ -3,8 +3,8 @@ import Image from "next/image";
 
 function Testimonial() {
   return (
-    <div className="relative bg-gray-500 text-white py-12 px-6 md:px-16">
-      <h2 className="text-4xl font-bold text-center mb-12">What Our Students Say</h2>
+    <div className="relative bg-gray-200 text-white py-12 px-6 md:px-16">
+      <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">What Our Students Say</h2>
       <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
         {[
           {
@@ -62,7 +62,7 @@ function Testimonial() {
 
             {/* Hidden Content Revealed on Hover */}
             <div className="absolute inset-0 bg-gray-900 bg-opacity-30 border bg-border-light-100 flex flex-col justify-center items-center p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-              <h3 className="text-2xl font-bold text-white mb-2">
+              <h3 className="text-2xl font-bold text-yellow-500 mb-2">
                 {testimonial.name}
               </h3>
               <p className="text-gray-200 text-center">{testimonial.text}</p>

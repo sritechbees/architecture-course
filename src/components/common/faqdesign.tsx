@@ -46,11 +46,11 @@ const ArchitectureFaq = () => {
   };
 
   return (
-    <div className="bg-gray-100">
-        <p className="text-blue-500 font-bold text-4xl text-center py-10">Question And Answer</p>
+    <div className="">
+        <p className="text-gray-900 font-bold text-4xl text-center py-10">Question And Answer</p>
       <div className="max-w-7xl mx-auto px-4 mb-16 lg:flex lg:items-center">
         <div className="lg:w-1/2 flex flex-col items-center">
-          <div className="flex-grow max-w-lg p-6 bg-white shadow-lg rounded-lg">
+          <div className="flex-grow max-w-lg p-6 bg-gray-300 shadow-lg rounded-lg">
             <Image
               src={faqList[currentCard].image}
               alt={faqList[currentCard].question}
@@ -68,21 +68,21 @@ const ArchitectureFaq = () => {
           <div className="mt-6 flex space-x-4">
             <button
               onClick={handlePrevious}
-              className="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 shadow-lg"
+              className="px-6 py-3 bg-yellow-400 text-white rounded-lg hover:bg-yellow-500 shadow-lg"
             >
               Previous
             </button>
             <button
               onClick={handleNext}
-              className="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 shadow-lg"
+              className="px-6 py-3 bg-yellow-400 text-white rounded-lg hover:bg-yellow-500 shadow-lg"
             >
               Next
             </button>
           </div>
         </div>
 
-        <div className="lg:w-1/2 bg-white shadow-lg rounded-lg p-8 mb-8 lg:mb-0 max-sm:mt-5 max-lg:mt-5 max-xl:ml-5 lg:mr-6">
-         <Image src="/about/faq.jpg" className="h-[385] w-[550px]" height={200} width={200} alt="faqimage" />
+        <div className="lg:w-1/2 bg-yellow-200 shadow-lg rounded-lg p-5 mb-8 lg:mb-0 max-sm:mt-5 max-lg:mt-5 max-xl:ml-5 lg:mr-6">
+         <Image src="/about/faq.jpg" className="h-[385] w-[550px] rounded-2xl" height={200} width={200} alt="faqimage" />
         </div>
 
 

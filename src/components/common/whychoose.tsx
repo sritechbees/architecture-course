@@ -45,7 +45,7 @@ const WhyChoseUs: React.FC<WhyChooseUsProps> = ({ firstRow, secondRow }) => {
                 ) : (
                     <>
                         <div className="bg-gray-900 flex flex-col justify-center text-lg text-white p-5">
-                            <h3 className="text-xl font-bold mb-5">{firstRow.number1}. {firstRow.title1}</h3>
+                            <h3 className="text-xl font-bold text-yellow-500 mb-5">{firstRow.number1}. {firstRow.title1}</h3>
                             <p className='!text-sm'>{firstRow.text1}</p>
                         </div>
                         <Image src={firstRow.image1} alt="First Column Image 1" className="w-full h-auto" width={500} height={300} />
@@ -98,7 +98,7 @@ const WhyChoseUs: React.FC<WhyChooseUsProps> = ({ firstRow, secondRow }) => {
                     <>
                         <Image src={secondRow.image4} alt="Second Column Image 4" className="w-full h-auto" width={500} height={300} />
                         <div className="bg-gray-900 flex flex-col justify-center text-lg text-white p-5">
-                            <h3 className="text-xl font-bold mb-5">{secondRow.number4}. {secondRow.title4}</h3>
+                            <h3 className="text-xl font-bold text-yellow-500 mb-5">{secondRow.number4}. {secondRow.title4}</h3>
                             <p className='!text-sm'>{secondRow.text4}</p>
                         </div>
                     </>

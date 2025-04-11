@@ -7,7 +7,7 @@ function Evaluatetwo() {
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center">
         {/* Left Content Section */}
         <div className="md:w-1/2 p-6">
-          <h2 className="text-3xl font-bold text-gray-800 mb-4">Advanced Corporate Architecture Training</h2>
+          <h2 className="text-3xl font-bold text-gray-800 mb-4"><span className='text-yellow-500'>Advanced Corporate</span> Architecture Training</h2>
           <p className="text-gray-600 mb-4">
             Stay ahead in the architectural industry with our advanced corporate training programs. Gain expertise in 
             cutting-edge architectural designs, innovative construction methodologies, and smart infrastructure solutions.

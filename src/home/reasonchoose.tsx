@@ -5,7 +5,7 @@ function Reasonchoose() {
   return (
     <div>
       <div className="max-w-6xl m-auto">  
-          <h1 className='text-4xl font-bold text-center mb-8 mt-10 '>Reasons for Choosing Us</h1> 
+          <h1 className='text-4xl font-bold text-center mb-8 mt-10 text-gray-900 '>Reasons for Choosing Us</h1> 
         <WhyChoseUs
           firstRow={{
             imageFirst: false,

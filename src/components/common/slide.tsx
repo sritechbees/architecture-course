@@ -9,6 +9,8 @@ import { Autoplay, FreeMode, Pagination } from 'swiper/modules';
 import Setupone from './setuptwo';
 import Setup from './setup';
 import Setupthree from './setupthree';
+import Setupfour from './setupfour';
+import Setupfive from './setupfive';
 
 const Slide = () => {
   return (
@@ -22,7 +24,7 @@ const Slide = () => {
         modules={[FreeMode, Pagination, Autoplay]}
         className='mySwiper'
       >
-        <SwiperSlide >
+        <SwiperSlide className='mb-10 ml[7px] overflow-hidden'>
          <Setupone/> 
         </SwiperSlide>
 
@@ -33,7 +35,15 @@ const Slide = () => {
         <SwiperSlide> 
            <Setupthree/>   
         </SwiperSlide>
-
+        
+        <SwiperSlide> 
+           <Setupfour/>
+        </SwiperSlide>
+        
+        <SwiperSlide> 
+          <Setupfive/>
+        </SwiperSlide>
+        
       </Swiper>
     </div>
   );

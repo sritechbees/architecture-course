@@ -2,8 +2,11 @@ import App_layout from "@/layout/app_layout";
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Definition from "./definition";
+
 import ModernStyles from "./morden_styles";
+import Offer from "@/components/common/offer";
+import CardDesign from "@/components/common/card_design";
+import MethodologyTeaching from "@/components/common/methodology_teaching";
 
 function ModernDescription() {
   return (
@@ -51,8 +54,11 @@ function ModernDescription() {
           </div>
        
         </section>
-        <Definition/>
+       
         <ModernStyles/>
+        <Offer/>
+        <MethodologyTeaching/>
+        <CardDesign/>
       </App_layout>
     </div>
   );

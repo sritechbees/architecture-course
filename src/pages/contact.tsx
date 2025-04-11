@@ -38,13 +38,13 @@ function Contact() {
     <App_layout>
       <div className="py-5 mt-22 bg-gradient-to-br from-blue-50 to-gray-100">
         <div data-aos="fade-up" className="">
-          <h3 className="text-3xl font-bold text-center text-gray-800">Get in touch with us</h3>
+          <h3 className="text-3xl font-bold text-center text-gray-800">Get in <span className='text-yellow-500'>touch</span>  with us</h3>
 
           <div className="pt-10 flex flex-col md:flex-row max-w-[1300px] mx-auto justify-evenly max-md:px-4">
             {/* Contact Form Section (Left) */}
             <div data-aos="fade-right" className="w-full md:w-6/12">
               <div className="bg-white border border-gray-300 shadow-xl rounded-2xl p-8 max-w-[600px] mx-auto backdrop-blur-md bg-opacity-60">
-                <h3 className="text-blue-500 text-2xl pb-4 text-center font-bold">Let&apos;s Work Together</h3>
+                <h3 className="text-yellow-500 text-2xl pb-4 text-center font-bold">Let&apos;s Work Together</h3>
                 <h1 className="text-[26px] font-bold">Contact us</h1>
                     <p className="mt-3 text-gray-600">
                       Email us at techbeeshive@gmail.com or message us here:
@@ -138,9 +138,9 @@ function Contact() {
                           </label>
                         </div>
                         </div>
-                  <button type="submit" className="mt-5 bg-blue-500 hover:bg-blue-600 transition duration-300 px-8 py-2 text-white flex items-center gap-2 rounded-lg shadow-lg" disabled={loading}>
+                  <button type="submit" className="mt-5 bg-yellow-400 hover:bg-yellow-500 transition duration-300 px-8 py-2 text-gray-900 flex items-center gap-2 rounded-lg shadow-lg" disabled={loading}>
                     {loading ? "Sending..." : "Send Message"}
-                    <Image src="/paper.svg" width={35} height={35} alt="sent-icon" />
+                    <Image src="/paper.svg" className='' width={35} height={35}  alt="sent-icon" />
                   </button>
                 </form>
               </div>
@@ -152,7 +152,7 @@ function Contact() {
               {/* Location Section */}
               <div className="leading-snug w-full md:w-80 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-5 border border-gray-200 p-5 -px-3">
                 <h2 className="font-bold text-lg capitalize flex items-center md:text-xl">
-                  <AddressIcon className="mr-3 icons-color text-blue-500 h-5 w-5 md:h-7 md:w-7" />
+                  <AddressIcon className="mr-3 icons-color text-yellow-500 h-5 w-5 md:h-7 md:w-7" />
                   Location
                 </h2>
                 <p className="text-[16px] text-gray-600 md:pt-5 text-center">
@@ -164,7 +164,7 @@ function Contact() {
               {/* Phone Number Section */}
               <div className="leading-snug w-full md:w-80 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-5 border border-gray-200 p-5 -px-3">
                 <h2 className="font-bold flex items-center md:text-xl">
-                  <CallIcon className="mr-3 icons-color text-blue-500  h-5 w-5 md:h-7 md:w-7" />
+                  <CallIcon className="mr-3 icons-color text-yellow-500  h-5 w-5 md:h-7 md:w-7" />
                   Phone Number
                 </h2>
                 <p className="text-[16px] text-gray-600 md:pt-5 text-center">
@@ -178,7 +178,7 @@ function Contact() {
               {/* Email Section */}
               <div className="leading-snug w-full md:w-80 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-5 border border-gray-200 p-5 -px-3">
                 <h2 className="font-bold flex items-center md:text-xl">
-                  <EmailIcon className="mr-3 icons-color text-blue-500 h-5 w-5 md:h-7 md:w-7" />
+                  <EmailIcon className="mr-3 icons-color text-yellow-500 h-5 w-5 md:h-7 md:w-7" />
                   Email
                 </h2>
                 <p className="text-[16px] text-gray-600 md:pt-5 text-center">
@@ -196,7 +196,7 @@ function Contact() {
 
       <div className="pb-16 bg-gradient-to-br from-blue-50 to-gray-100">
         <h2 className="text-center font-semibold text-4xl p-8">
-          Other ways to <span className="text-primary">Reach Us</span>
+          Other ways to <span className="text-yellow-500">Reach Us</span>
         </h2>
 
         <div className="flex flex-wrap justify-center max-md:p-4 max-xl:px-6">

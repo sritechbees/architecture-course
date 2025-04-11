@@ -6,13 +6,13 @@ import { PlayCircle } from 'lucide-react';
 
 function Setupone() {
   return (
-    <div className='relative w-full h-[500px] flex items-center justify-start px-16'>
+    <div className='relative w-[1200px] h-[500px] mt-10 ml-7 flex items-center justify-start px-16'>
       <Image 
         src='/home/banner3.jpg' 
         alt='Setup Background' 
         layout='fill' 
         objectFit='cover' 
-        className='absolute inset-0 w-full h-full' 
+        className='absolute inset-0 w-full h-full rounded-2xl' 
       />
       <div className='relative z-10 text-left text-gray-900 p-6 rounded-md max-w-lg'>
         <h1 className='text-5xl font-bold w-[400px]'>Transform Your Future</h1>
