@@ -4,7 +4,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { FaUserGraduate, FaPhone, FaGlobe } from 'react-icons/fa';
 import Link from 'next/link';
-import Courseslist from "@/pages/courses_list";
+
 
 export default function Coursescard() {
   useEffect(() => {

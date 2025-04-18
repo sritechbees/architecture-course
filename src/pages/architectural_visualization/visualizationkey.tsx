@@ -1,7 +1,14 @@
 import App_layout from '@/layout/app_layout';
 import Image from 'next/image';
 import React, { useState } from 'react';
-import UrbanDescription from '../urbandesign/urban_description';
+import UrbanDescription from '../architectural_workshop/workshop';
+import IntroductionSection from './introsection';
+import Fundamentals3DModeling from './3dmodeling';
+import TexturingSection from './texturing_section';
+import LightingSection from './lighting_section';
+import PostProcessingSection from './post_processing';
+import AnimationWalkthroughsSection from './animationwalk';
+import PortfolioCareerDevelopmentSection from './portfolio';
 
 function Visualizationkey() {
   const [showVideo, setShowVideo] = useState(false);
@@ -73,7 +80,13 @@ function Visualizationkey() {
             </div>
           )}
         </div>
-        <UrbanDescription/>
+        <IntroductionSection/>
+        <Fundamentals3DModeling/>
+        <TexturingSection/>
+        <LightingSection/>
+        <PostProcessingSection/>
+        <AnimationWalkthroughsSection/>
+        <PortfolioCareerDevelopmentSection/>
       </App_layout>
     </div>
   );

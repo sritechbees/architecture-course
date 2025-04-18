@@ -3,6 +3,12 @@ import "aos/dist/aos.css";
 import { useEffect } from "react";
 import AOS from "aos";
 import Image from "next/image";
+import SustainableTips from "./sustainabletips";
+import SustainableArchitecture from "./sustainablearchitecture";
+import Workdesignsections from "../architectural_workshop/workshopdesignsections";
+import FAQSection from "./faqsection";
+import Sustainable_designsection from "./sustainable_designsection";
+import App_layout from "@/layout/app_layout";
 
 function SustainableDescription() {
   useEffect(() => {
@@ -10,8 +16,9 @@ function SustainableDescription() {
   }, []);
 
   return (
+    <App_layout>
     <div className="">
-    <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between p-6 bg-green-100 rounded-2xl shadow-lg max-w-4xl mx-auto">
+    <div className="max-w-7xl mx-auto flex flex-col mt-20 py-16 md:flex-row items-center justify-between p-6 bg-green-100 rounded-2xl shadow-lg max-w-4xl mx-auto">
       <div
         className="md:w-1/2 text-center md:text-left"
         data-aos="fade-right"
@@ -34,7 +41,13 @@ function SustainableDescription() {
         />
       </div>
     </div>
+    <SustainableTips/>
+    <SustainableArchitecture/>
+
+    <Sustainable_designsection/>
+    <FAQSection/>
     </div>
+    </App_layout>
   );
 }
 

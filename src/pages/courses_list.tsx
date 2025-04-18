@@ -8,7 +8,7 @@ const Courses = [
     title: 'Architectural WorkShop',
     description: 'Design modern and functional spaces with key urban strategies.',
     image: '/courses/high perfomance.jpg',
-    link: "/urbandesign/urban_description",
+    link: "/architectural_workshop/workshop",
     flowerClass: "flower-1"
   },
   {

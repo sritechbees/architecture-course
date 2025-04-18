@@ -1,5 +1,4 @@
-import { motion } from "framer-motion";
-import Image from "next/image";
+import React from "react";
 
 const features = [
   {
@@ -19,15 +18,13 @@ const features = [
 export default function KeyFeaturesCard() {
   return (
     <div className="min-h-screen bg-[#7A8C86] p-6">
-      <div className="grid grid-cols-1 md:grid-cols-2 max-w-7xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden">
+      <div className="grid grid-cols-1 md:grid-cols-2 max-w-7xl mx-auto rounded-2xl shadow-xl overflow-hidden">
         {/* Left Column - Image */}
-        <div className="bg-gray-950 grid place-items-center p-6">
-          <Image
-            src="/courses/key.jpg"
-            height={200}
-            width={200}
+        <div className="flex justify-center items-center p-6">
+          <img
+            src="/courses/Key.jpg"
             alt="BIM Visual"
-            className="rounded-xl w-[460px] h-auto object-cover"
+            className="rounded-xl w-[460px] h-auto"
           />
         </div>
 
@@ -38,16 +35,13 @@ export default function KeyFeaturesCard() {
           </h2>
           <div className="space-y-6">
             {features.map((item, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.2, duration: 0.6 }}
                 className="bg-gray-950 bg-opacity-80 p-4 rounded-lg"
               >
                 <h3 className="font-semibold text-lg mb-1">{item.title}</h3>
                 <p className="text-sm">{item.desc}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>

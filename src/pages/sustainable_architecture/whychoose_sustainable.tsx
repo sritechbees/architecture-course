@@ -4,8 +4,9 @@ import App_layout from "@/layout/app_layout";
 import SustainableDescription from "./sustainable_description";
 import SustainableTips from "./sustainabletips";
 import SustainableArchitecture from "./sustainablearchitecture";
-import UrbanDesignSections from "../urbandesign/urban_designsection";
+import UrbanDesignSections from "../architectural_workshop/workshopdesignsections";
 import FAQSection from "./faqsection";
+import Link from "next/link";
 
 const backgrounds = [
 
@@ -28,7 +29,7 @@ const WhychooseSustainable = () => {
   return (
     <div>
       <App_layout>
-        <div className="relative w-full h-screen overflow-hidden flex items-center justify-center text-white">
+        <div className="relative w-full h-screen mt-20 overflow-hidden flex items-center justify-center text-white">
           {/* Background Image (Changes after video) */}
           {!showVideo && (
             <div
@@ -65,20 +66,25 @@ const WhychooseSustainable = () => {
               transition={{ delay: 0.5, duration: 0.5 }}
               className="mt-6"
             >
+              <div className="flex gap-5 justify-center">
               <button
                 onClick={handleButtonClick}
                 className="bg-white text-blue-600 font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-gray-200 transition"
               >
                 Get Started
               </button>
+              <Link href="/sustainable_architecture/sustainable_description">
+              <button
+                onClick={handleButtonClick}
+                className="bg-white text-blue-600 font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-gray-200 transition"
+              >
+                view More
+              </button>
+              </Link>
+              </div>
             </motion.div>
           </motion.div>
-        </div>
-        <SustainableDescription />
-        <SustainableTips/>
-        <SustainableArchitecture/>
-        <UrbanDesignSections/>
-        <FAQSection/>
+        </div>   
       </App_layout>
     </div>
   );
