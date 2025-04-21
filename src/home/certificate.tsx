@@ -3,13 +3,13 @@ import Image from "next/image";
 
 function Certificate() {
   return (
-    <div className="flex items-center justify-center bg-blue-50 px-4 py-8 rounded-lg shadow-md">
+    <div className="flex items-center justify-center bg-gray-100 px-4 py-2 pb-7 rounded-lg shadow-md">
       <div className="flex flex-col lg:flex-row items-center justify-between lg:ml-20 gap-8 w-full max-w-7xl mx-auto">
         
         {/* Left Side - Description */}
         <div className="w-full">
           <p className="text-2xl font-semibold mb-4 text-center lg:text-left">
-            Certificate of Completion
+            Certificate<span className="text-yellow-500"> of Completion</span> 
           </p>
           <p className="text-gray-600 text-sm md:text-base leading-relaxed text-justify">
             This certificate is awarded to individuals who have successfully completed the course.

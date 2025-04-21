@@ -58,7 +58,7 @@ const fadeUp = {
 
 const KeyFeatures = () => {
   return (
-    <div className="bg-gray-100 py-8 mb-8 px-6 md:px-20" id="features">
+    <div className=" py-8 mb-8 px-6 md:px-20" id="features">
       <motion.h2
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}

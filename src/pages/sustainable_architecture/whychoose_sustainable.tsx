@@ -52,7 +52,7 @@ const WhychooseSustainable = () => {
             transition={{ duration: 1, ease: "easeOut" }}
             className="relative text-center p-6 max-w-2xl"
           >
-            <h1 className="text-5xl font-bold">Why Choose Sustainable Architecture?</h1>
+            <h1 className="text-5xl font-bold">Why Choose <span className="text-yellow-500">Sustainable Architecture</span>?</h1>
             <p className="mt-4 text-lg text-white/90">
               Embrace a future of sustainability. Protect the oceans, reduce waste, and live responsibly.
             </p>
@@ -65,14 +65,14 @@ const WhychooseSustainable = () => {
               <div className="flex gap-5 justify-center">
               <button
                 onClick={handleButtonClick}
-                className="bg-white text-blue-600 font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-gray-200 transition"
+                className="bg-yellow-500 text-gray-900 font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-gray-200 transition"
               >
                 Get Started
               </button>
               <Link href="/sustainable_architecture/sustainable_description">
               <button
                 onClick={handleButtonClick}
-                className="bg-white text-blue-600 font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-gray-200 transition"
+                className="bg-white text-gray-900 font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-yellow-500 transition"
               >
                 view More
               </button>

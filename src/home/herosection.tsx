@@ -16,22 +16,23 @@ function HeroSection() {
           {/* Left Side - Text Content */}
           <div className="w-full lg:w-1/2 text-center lg:text-left space-y-5">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
-              Elevate Your Architectural Skills
+              Elevate <span className="text-yellow-500">Your Architectural</span> Skills
             </h1>
             <p className="text-base sm:text-lg text-gray-800 max-w-md mx-auto lg:mx-0">
               Join our comprehensive architecture course and master modern building design,
               urban planning, and 3D modeling.
             </p>
             <div className="flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0 justify-center lg:justify-start">
-              <Link href="/about">
+              <Link href="/courses">
                 <button className="bg-yellow-400 hover:bg-yellow-500 text-white px-6 py-3 rounded-lg text-lg font-medium transition-all shadow-lg">
                   Get Started
                 </button>
               </Link>
               <button className="relative inline-block px-6 py-3 max-sm:w-48 max-sm:ml-12 border bg-gray-900 border-gray-900 text-white font-semibold rounded-lg overflow-hidden group">
                 <span className="absolute inset-0 bg-yellow-500 transition-transform transform scale-x-0 group-hover:scale-x-100 origin-left duration-300"></span>
+               <Link href="/certificates">
                 <span className="relative text-yellow-500 group-hover:text-white transition-colors duration-300">Certifications</span>
-              </button>
+                </Link>  </button>
             </div>
           </div>
 

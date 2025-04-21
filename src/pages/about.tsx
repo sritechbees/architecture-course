@@ -29,7 +29,7 @@ function About() {
 
       
         <motion.h1
-          className="about-heading text-4xl font-extrabold text-center text-yellow-500 mb-6 md:text-4xl"
+          className="about-heading text-3xl font-extrabold text-center text-yellow-500 mb-6 md:text-4xl"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
@@ -97,7 +97,7 @@ function About() {
           animate={{ opacity: 1 }}
           transition={{ duration: 1.5, delay: 2 }}
         >
-          <h2 className="text-3xl font-semibold text-gray-800 mb-4">Trending in Architecture</h2>
+          <h2 className="text-3xl font-semibold mb-4">Trending <span className='text-yellow-500'>in Architecture</span></h2>
           <p className="text-lg text-gray-600">
             Discover the latest trends in architecture that are revolutionizing design, construction, and urban planning. From smart cities to eco-friendly designs, the future of architecture is here.
           </p>
@@ -106,22 +106,22 @@ function About() {
         {/* Future Architecture Trends Section with AOS Animation */}
         <div className="future-trends bg-white py-10 px-6 mt-16 rounded-lg shadow-lg text-center" data-aos="fade-up">
           <h2 className="text-3xl font-bold text-gray-800 mb-4" data-aos="zoom-in">
-            Future Architecture Trends
+            Future <span className='text-yellow-500'>Architecture </span>Trends
           </h2>
           <p className="text-lg text-gray-600 mb-6" data-aos="fade-up" data-aos-delay="300">
             Explore how AI, smart materials, and 3D printing are transforming architecture.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="trend-card p-6 bg-gray-100 rounded-lg shadow-md" data-aos="flip-left">
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">AI-Driven Designs</h3>
+              <h3 className="text-xl font-semibold text-yellow-500 mb-2">AI-Driven Designs</h3>
               <p className="text-gray-600">Discover how artificial intelligence is revolutionizing architectural planning.</p>
             </div>
             <div className="trend-card p-6 bg-gray-100 rounded-lg shadow-md" data-aos="flip-right" data-aos-delay="300">
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">Sustainable Smart Cities</h3>
+              <h3 className="text-xl font-semibold text-yellow-500 mb-2">Sustainable Smart Cities</h3>
               <p className="text-gray-600">Learn about green energy solutions and intelligent city planning.</p>
             </div>
             <div className="trend-card p-6 bg-gray-100 rounded-lg shadow-md" data-aos="flip-up" data-aos-delay="600">
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">3D Printing in Construction</h3>
+              <h3 className="text-xl font-semibold text-yellow-500 mb-2">3D Printing in Construction</h3>
               <p className="text-gray-600">Understand how 3D printing is reshaping how buildings are constructed.</p>
             </div>
           </div>

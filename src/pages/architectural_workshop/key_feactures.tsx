@@ -56,8 +56,8 @@ function KeyFeatures() {
 
 
   return (
-    <div>
-    <div className="p-10 bg-gray-100 text-center">
+    <div className=''>
+    <div className="p-10 text-center">
       <h2 className="text-3xl font-bold mb-9"> Key Features of our<span className='text-yellow-500'> Architectural WorkShop </span> Courses</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {features.map((feature, index) => (
@@ -83,7 +83,7 @@ function KeyFeatures() {
       </div>
     </div>
 
-<div className="p-10 bg-gray-100 text-center">
+<div className="p-10 text-center">
       <h2 className="text-3xl font-bold mb-6">Why Attend <span className='text-yellow-500'> Architectural WorkShop </span> Courses?</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {courses.map((course, index) => (

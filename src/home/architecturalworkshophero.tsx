@@ -27,9 +27,9 @@ export default function ArchitecturalWorkshopHeroTwo() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9 }}
-            className="text-3xl md:text-4xl text-[#2e4e45] mt-4"
+            className="text-3xl md:text-4xl text-gray-900 font-bold mt-4"
           >
-            Elevate Your <span className=" text-yellow-600">Design Vision</span>
+            Elevate Your <span className=" text-yellow-500">Design Vision</span>
           </motion.h2>
 
           <motion.p

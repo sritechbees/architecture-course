@@ -3,8 +3,8 @@ import Image from "next/image";
 
 function Testimonial() {
   return (
-    <div className="relative bg-gray-200 text-white py-12 px-6 md:px-16">
-      <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">What Our Students Say</h2>
+    <div className="relative text-white py-2 px-6 md:px-16">
+      <h2 className="text-3xl font-bold text-center text-gray-900 mb-12"><span className="text-yellow-500">What Our</span> Students Say</h2>
       <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
         {[
           {

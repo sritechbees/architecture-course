@@ -55,7 +55,7 @@ function Courseslist() {
   return (
     <App_layout>
       <div className="max-w-7xl mx-auto bg-gradient-to-r from-green-50 to-blue-100 py-16 px-8 mt-12">
-        <h2 className="text-4xl font-bold text-center text-green-700 mb-12">
+        <h2 className="text-4xl font-bold text-center text-yellow-500 mb-12">
           Explore Architecture Features
         </h2>
 
@@ -78,13 +78,19 @@ function Courseslist() {
                 }}
               >
                 {/* Front Face */}
-                <div className="absolute inset-0 backface-hidden">
-                  <Image
-                    src={course.image} height={200} width={200}
-                    alt={course.title}
-                    className="w-full h-full object-cover rounded-2xl opacity-80"
-                  />
-                </div>
+              
+                <div className="absolute inset-0 backface-hidden rounded-2xl overflow-hidden">
+  <Image
+    src={course.image}
+    height={200}
+    width={200}
+    alt={course.title}
+    className="w-full h-full object-cover opacity-80"
+  />
+  <div className="absolute top-0 left-0 w-full bg-yellow-500 bg-opacity-40 p-3 rounded-t-2xl">
+    <h2 className="text-white text-lg font-semibold text-center">{course.title}</h2>
+  </div>
+</div>
 
                 {/* Back Face */}
                 <div

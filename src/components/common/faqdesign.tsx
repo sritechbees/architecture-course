@@ -47,7 +47,7 @@ const ArchitectureFaq = () => {
 
   return (
     <div className="">
-        <p className="text-gray-900 font-bold text-4xl text-center py-10">Question And Answer</p>
+        <p className="text-gray-900 font-bold text-3xl text-center py-10">Question<span className="text-yellow-500"> And Answer</span> </p>
       <div className="max-w-7xl mx-auto px-4 mb-16 lg:flex lg:items-center">
         <div className="lg:w-1/2 flex flex-col items-center">
           <div className="flex-grow max-w-lg p-6 bg-gray-300 shadow-lg rounded-lg">

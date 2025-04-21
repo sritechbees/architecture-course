@@ -43,7 +43,7 @@ function portfolio() {
             className="w-full lg:w-1/2 h-72 md:h-96 object-cover rounded-xl shadow-lg"
           />
           <div className="lg:w-1/2">
-            <h2 className="text-2xl md:text-4xl font-bold text-gray-800 mb-4">{item.title}</h2>
+            <h2 className="text-2xl md:text-4xl font-bold text-gray-800 hover:text-yellow-500 mb-4">{item.title}</h2>
             <p className="text-gray-600 text-lg">{item.description}</p>
           </div>
         </motion.div>

@@ -4,7 +4,7 @@ import Image from "next/image";
 
 function MissionVision() {
   return (
-    <div className="mt-28 bg-gray-200 p-2 max-w-7xl mx-auto rounded-2xl">
+    <div className="mt-28 p-2 max-w-7xl mx-auto rounded-2xl">
     <div className="relative px-6 md:px-16 overflow-hidden">
       <div className="relative z-10  grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         {/* Image Section */}
@@ -18,7 +18,7 @@ function MissionVision() {
           transition={{ duration: 1 }}
           className="text-center md:text-left"
         >
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Vision & Mission</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4"><span className="text-yellow-500">Our Vision</span> & Mission</h2>
           <p className="text-lg text-gray-900 mb-4">
             Our vision is to shape the future of architecture through innovation and sustainability. Our mission is to provide comprehensive training that emphasizes creativity and practical skills to build a better world.
           </p>
