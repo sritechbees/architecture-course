@@ -8,7 +8,7 @@ function ExpertInstructors() {
          {/* Image */}
          <div className="w-full">
           <Image
-            src="/courses/Expertinstructors.jpg" height={200} width={200}
+            src="/courses/ExpertInstructors.jpg" height={200} width={200}
             alt="Building Information Modeling Illustration"
             className="rounded-2xl shadow-lg w-full"
           />

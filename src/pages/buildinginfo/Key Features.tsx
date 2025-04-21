@@ -14,7 +14,7 @@ export default function KeyFeaturesCard() {
         {/* Left Column - Image */}
         <div className="flex justify-center items-center px-6 bg-gray-50">
           <Image
-            src="/courses/Keyy.png"
+            src="/courses/keyy.png"
             height={400}
             width={400}
             alt="BIM Key Features"

@@ -25,7 +25,7 @@ function Handsonproject() {
          {/* Image */}
          <div className="w-full">
           <Image
-            src="/courses/Hands-On Project.jpg" height={200} width={200}
+            src="/courses/Hands-on Project.jpg" height={200} width={200}
             alt="Hands-on BIM Project"
             className="rounded-2xl shadow-xl w-full"
           />
