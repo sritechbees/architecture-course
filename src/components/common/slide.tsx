@@ -14,7 +14,7 @@ import Setupfive from './setupfive';
 
 const Slide = () => {
   return (
-    <div className=' mx-auto  mt-20 '>
+    <div className=' mx-auto mt-20 '>
       <Swiper
         slidesPerView={1}
         spaceBetween={30}
@@ -24,8 +24,10 @@ const Slide = () => {
         modules={[FreeMode, Pagination, Autoplay]}
         className='mySwiper'
       >
-        <SwiperSlide className='mb-10 ml[7px] overflow-hidden'>
+        <SwiperSlide className='mb-10 overflow-hidden'>
+          <div className=''>
          <Setupone/> 
+         </div>
         </SwiperSlide>
 
         <SwiperSlide>        
