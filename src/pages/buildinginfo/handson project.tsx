@@ -1,15 +1,16 @@
+import Image from 'next/image';
 import React from 'react';
 
 function Handsonproject() {
   return (
-    <section className="w-full bg-white py-12 px-6 md:px-16">
+    <section className="w-full bg-gray-100 py-1 px-6 md:px-16">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
        
 
         {/* Content */}
         <div>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-            Hands-on BIM Architecture Projects
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
+            Hands-on BIM<span className='text-yellow-500'> Architecture Projects</span> 
           </h2>
           <p className="text-gray-600 mb-4">
             Dive into real-world architectural scenarios using Building Information Modeling (BIM). These hands-on projects help you apply theoretical knowledge to practical situations, improving your design, modeling, and coordination skills.
@@ -23,8 +24,8 @@ function Handsonproject() {
         </div>
          {/* Image */}
          <div className="w-full">
-          <img
-            src="/courses/Hands-On Project.jpg"
+          <Image
+            src="/courses/Hands-On Project.jpg" height={200} width={200}
             alt="Hands-on BIM Project"
             className="rounded-2xl shadow-xl w-full"
           />

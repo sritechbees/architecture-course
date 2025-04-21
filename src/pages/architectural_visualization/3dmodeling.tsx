@@ -10,7 +10,7 @@ export default function Fundamentals3DModeling() {
   }, []);
 
   return (
-    <section className="bg-white py-16 px-6 md:px-20">
+    <section className="bg-[#f1f5f9] py-8 px-6 md:px-20">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           {/* Right Image */}
           <div data-aos="fade-left" className="text-center">
@@ -24,8 +24,8 @@ export default function Fundamentals3DModeling() {
         </div>
         {/* Left Content */}
         <div data-aos="fade-right">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Fundamentals of 3D Modeling
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+            Fundamentals of<span className='text-yellow-500'> 3D Modeling</span> 
           </h2>
           <p className="text-gray-600 mb-6 leading-relaxed">
             Learn the essential skills and tools for creating accurate 3D models of architectural elements. This module bridges the gap between design ideas and digital construction.

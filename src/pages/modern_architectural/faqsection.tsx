@@ -36,7 +36,7 @@ export default function FAQSection() {
 
   return (
     <div className='py-16'>
-      <div className="max-w-6xl mx-auto p-6 bg-gradient-to-r from-indigo-100 to-purple-300 shadow-lg rounded-lg flex flex-col md:flex-row items-center gap-6">
+      <div className="max-w-6xl mx-auto p-6 bg-gradient-to-r from-indigo-100 to-yellow-300 shadow-lg rounded-lg flex flex-col md:flex-row items-center gap-6">
         <div className="w-full md:w-1/3">
           <Image
             src="/courses/ai one.jpg"

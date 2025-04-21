@@ -10,7 +10,7 @@ export default function LightingSection() {
   }, []);
 
   return (
-    <section className="bg-[#eef2f7] py-16 px-6 md:px-20">
+    <section className="bg-[#f1f5f9] py-8 px-6 md:px-20">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
           {/* Image */}
           <div data-aos="zoom-in">
@@ -24,8 +24,8 @@ export default function LightingSection() {
         </div>
         {/* Text */}
         <div data-aos="fade-right">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-            Lighting & Rendering Techniques
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
+            <span className='text-yellow-500'>Lighting &</span> Rendering Techniques
           </h2>
           <p className="text-gray-700 mb-4 leading-relaxed">
             Bring your designs to life with strategic lighting and rendering. Learn both real-time and photorealistic techniques for stunning results.

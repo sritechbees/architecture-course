@@ -1,19 +1,14 @@
 import App_layout from '@/layout/app_layout';
 import Image from 'next/image';
 import React from 'react';
-import UrbanDesignCourse from './whychoose_urbandesign';
-import UrbanModel from './urbanmodel';
-import QuestionAnswer from './question';
-import Students_testimonial from './sutdent_testimonial';
-import KeyFeatures from './key_feactures';
-import Urbandesign from './urbandesign';
+
 import UrbanDesignSections from './urban_designsection';
 
 function UrbanDescription() {
   return (
     <App_layout>
       <div className='py-20'>
-      <UrbanDesignCourse/>
+     
     <div className='max-w-7xl m-auto '>
     <div className="flex items-center gap-10 p-6 bg-gray-100 rounded-xl shadow-lg">   
       {/* left Side - Description */}
@@ -43,11 +38,7 @@ function UrbanDescription() {
     </div>
     </div>
     <UrbanDesignSections/>
-    <UrbanModel/>
-    <QuestionAnswer/>
-    <KeyFeatures/>
-    <Students_testimonial/>
-    <Urbandesign/>
+    
     </App_layout>
   );
 }

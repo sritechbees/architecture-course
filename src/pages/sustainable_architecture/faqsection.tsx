@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { Plus, Minus } from 'lucide-react';
 import Image from 'next/image';
 
+
 const faqs = [
   {
     question: 'What is sustainable architecture?',
@@ -35,8 +36,8 @@ export default function FAQSection() {
   };
 
   return (
-    <div className='py-16'>
-    <div className="max-w-6xl mx-auto p-6 bg-gradient-to-r from-blue-100 to-green-300 shadow-lg rounded-lg flex flex-col md:flex-row items-center gap-6">
+    <div className='py-7 mt-9'>
+    <div className="max-w-6xl mx-auto p-6 bg-gradient-to-r from-blue-100 to-yellow-300 shadow-lg rounded-lg flex flex-col md:flex-row items-center gap-6">
       <div className="w-full md:w-1/3">
         <Image src="/courses/faq.jpg" height={200} width={200} alt="Sustainable Architecture" className="h-96 w-96 rounded-lg shadow-md" />
       </div>

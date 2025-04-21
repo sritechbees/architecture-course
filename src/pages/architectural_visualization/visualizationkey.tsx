@@ -1,14 +1,7 @@
 import App_layout from '@/layout/app_layout';
 import Image from 'next/image';
 import React, { useState } from 'react';
-import UrbanDescription from '../architectural_workshop/workshop';
-import IntroductionSection from './introsection';
-import Fundamentals3DModeling from './3dmodeling';
-import TexturingSection from './texturing_section';
-import LightingSection from './lighting_section';
-import PostProcessingSection from './post_processing';
-import AnimationWalkthroughsSection from './animationwalk';
-import PortfolioCareerDevelopmentSection from './portfolio';
+import Link from 'next/link';
 
 function Visualizationkey() {
   const [showVideo, setShowVideo] = useState(false);
@@ -25,35 +18,38 @@ function Visualizationkey() {
     <div>
       <App_layout>
         {/* Hero Section */}
-        <div className="relative w-full h-screen text-white overflow-hidden">
+        <div className="relative w-full h-screen mt-20 text-white overflow-hidden">
           {/* Background Image */}
           <div className="absolute inset-0 z-0">
             <Image
-              src="/courses/Home.png" // Replace with your actual image path
+              src="/courses/hero visualization.jpg" // Replace with your actual image path
               alt="Architecture Background"
               layout="fill"
               objectFit="cover"
               quality={100}
               priority
             />
-            <div className="absolute inset-0 bg-black bg-opacity-60" />
+            <div className="absolute inset-0" />
           </div>
 
           {/* Hero Content */}
           <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
-            <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-4">
-              Master Architectural Visualization
+            <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-4">
+              Master Architectural<span className='text-yellow-500'> Visualization</span> 
             </h1>
             <p className="text-lg md:text-2xl max-w-2xl mb-6">
               Learn how to create photorealistic renders, stunning animations, and immersive experiences in 3D.
             </p>
             <div className="flex gap-4">
-              <button className="bg-white text-black px-6 py-3 rounded-2xl font-semibold hover:bg-gray-200 transition-all duration-300">
-                Enroll Now
-              </button>
+              <Link href="/architectural_visualization/choose">
+              <button className="bg-yellow-500 text-gray-900 px-6 py-3 rounded-2xl font-semibold hover:bg-white hover:text-yellow-500 transition-all duration-300">
+  Start Now
+</button>
+
+              </Link>
               <button
                 onClick={handleWatchDemo}
-                className="bg-transparent border border-white px-6 py-3 rounded-2xl font-semibold hover:bg-white hover:text-black transition-all duration-300"
+                className="bg-transparent border border-white px-6 py-3 rounded-2xl font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
               >
                 Watch Demo
               </button>
@@ -80,13 +76,7 @@ function Visualizationkey() {
             </div>
           )}
         </div>
-        <IntroductionSection/>
-        <Fundamentals3DModeling/>
-        <TexturingSection/>
-        <LightingSection/>
-        <PostProcessingSection/>
-        <AnimationWalkthroughsSection/>
-        <PortfolioCareerDevelopmentSection/>
+       
       </App_layout>
     </div>
   );

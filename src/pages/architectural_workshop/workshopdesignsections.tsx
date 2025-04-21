@@ -2,9 +2,9 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import App_layout from "@/layout/app_layout";
 import UrbanModel from "./urbanmodel";
-import QuestionAnswer from "./question";
-import KeyFeatures from "./key_feactures";
 import UrbanDesignV2 from "./urbandesign";
+import KeyFeatures from "./key_feactures";
+import QuestionAnswer from "./question";
 import StudentsTestimonial from "./sutdent_testimonial";
 
 const sections = [
@@ -55,7 +55,25 @@ const Workdesignsections = () => {
 
   return (
     <App_layout>
-      <div className="max-w-7xl mx-auto py-16 mt-16 p-6 space-y-20">
+      <UrbanModel/>
+      <div className="max-w-7xl mx-auto py-8 px-6 space-y-20">
+        
+        {/* 🔥 Section Main Heading */}
+        <motion.div
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center"
+        >
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-800">
+            Explore Our <span className="text-yellow-500">Workshop Design Curriculum</span>
+          </h1>
+          <p className="text-lg text-gray-600 mt-4 max-w-3xl mx-auto">
+            Discover how our training blends innovation, sustainability, and real-world experience for future-ready urban planners.
+          </p>
+        </motion.div>
+
+        {/* 🔄 Dynamic Sections */}
         {sections.map((section, index) => (
           <motion.div
             key={index}
@@ -65,8 +83,8 @@ const Workdesignsections = () => {
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.5 }}
           >
-            {/* Left Side Image */}
-            <motion.img 
+            {/* 🖼️ Image */}
+            <motion.img
               src={section.image}
               alt={section.title}
               className="w-full md:w-80 rounded-lg shadow-lg"
@@ -75,7 +93,7 @@ const Workdesignsections = () => {
               transition={{ duration: 0.6 }}
             />
 
-            {/* Right Side Content */}
+            {/* 📄 Content */}
             <div className="w-full md:w-1/2 flex flex-col items-start gap-4">
               <motion.button
                 className="px-6 py-2 bg-yellow-500 hover:bg-yellow-600 text-white font-semibold rounded-lg shadow transition duration-300 self-start"
@@ -86,7 +104,6 @@ const Workdesignsections = () => {
                 View Me
               </motion.button>
 
-              {/* Text Reveal */}
               {activeIndex === index && (
                 <motion.div
                   className="space-y-2 mt-2"
@@ -104,7 +121,12 @@ const Workdesignsections = () => {
           </motion.div>
         ))}
       </div>
-      <UrbanModel/>
+
+      {/* 3D or Interactive Model Section */}
+    <UrbanDesignV2/>
+    <KeyFeatures/>
+    <QuestionAnswer/>
+    <StudentsTestimonial/>
     </App_layout>
   );
 };

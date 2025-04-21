@@ -10,13 +10,22 @@ export default function TexturingSection() {
   }, []);
 
   return (
-    <section className="bg-[#fdfaf6] py-16 px-6 md:px-20">
+    <section className="bg-[#f1f5f9] py-8 px-6 md:px-20">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
-       
+       {/* Image */}
+       <div data-aos="zoom-in">
+          <Image
+            src="/courses/intro.jpg"
+            alt="Texturing Example"
+            width={550}
+            height={350}
+            className="rounded-2xl shadow-xl"
+          />
+        </div>
         {/* Content */}
         <div data-aos="fade-left">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Texturing, Materials & UV Mapping
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+            <span className="text-yellow-500">Texturing, Materials</span> & UV Mapping
           </h2>
           <p className="text-gray-700 mb-4 leading-relaxed">
             Create realistic architectural surfaces with precision. Master PBR materials, texture mapping, and UV layouts for stunning visualization.
@@ -29,16 +38,7 @@ export default function TexturingSection() {
             <li>Using libraries: Poliigon, Quixel Megascans</li>
           </ul>
         </div>
-         {/* Image */}
-         <div data-aos="zoom-in">
-          <Image
-            src="/courses/intro.jpg"
-            alt="Texturing Example"
-            width={550}
-            height={350}
-            className="rounded-2xl shadow-xl"
-          />
-        </div>
+         
 
       </div>
     </section>

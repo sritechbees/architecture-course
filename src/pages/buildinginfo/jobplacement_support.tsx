@@ -3,9 +3,9 @@ import { Briefcase, Building, Users } from 'lucide-react';
 
 function JobPlacementSupport() {
   return (
-    <section className="bg-white py-16 px-6 md:px-20">
+    <section className="bg-gray-100 pb-8 px-6 md:px-20">
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">Job Placement Support for Architecture</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-4 text-yellow-500">Job Placement Support for Architecture</h2>
         <p className="text-gray-600 mb-10">
           We provide comprehensive support to help architecture students and professionals connect with top firms, build strong portfolios, and prepare for interviews.
         </p>

@@ -25,8 +25,8 @@ const StudentsTestimonial = () => {
   }, []);
 
   return (
-    <div className="bg-gray-900 text-white py-12 px-6 md:px-12 lg:px-20 xl:px-32">
-      <h2 className="text-3xl md:text-4xl font-bold text-center mb-10" data-aos="fade-up">
+    <div className="bg-gray-900 text-white py-12 px-6  mb-12 md:px-12 lg:px-20 xl:px-32">
+      <h2 className="text-3xl md:text-4xl text-yellow-500 font-bold text-center mb-10" data-aos="fade-up">
         What Our Students Say
       </h2>
       <Swiper
@@ -46,7 +46,7 @@ const StudentsTestimonial = () => {
       >
         {testimonials.map((testimonial, index) => (
           <SwiperSlide key={index}>
-            <div className="bg-gray-800 text-white p-6 rounded-xl shadow-xl transform transition-all hover:scale-105 hover:bg-gradient-to-r from-blue-500 to-green-500">
+            <div className="bg-gray-800 text-white p-6 rounded-xl shadow-xl transform transition-all hover:scale-105 hover:bg-gradient-to-r from-blue-500 to-yellow-500">
               <div className="flex flex-col items-center">
                 <Image src={testimonial.image} alt={testimonial.name} width={80} height={80} className="w-20 h-20 rounded-full shadow-md" />
                 <p className="text-lg text-center mt-4 italic"> &ldquo;{testimonial.feedback} &ldquo;</p>

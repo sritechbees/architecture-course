@@ -38,11 +38,11 @@ export default function Coursescard() {
           <div className="text-[#4b2e2b] text-lg mb-4">
             <p className="mb-2 font-medium">Our Courses:</p>
             <ul className="list-disc ml-6 space-y-1">
-              <li>Sustainable Architecture</li>
-              <li>Building Info Modeling</li>
-              <li>Architectural Visualization</li>
-              <li>AI-in Architecture</li>
-              <li>Architectural Workshop</li>
+              <Link href="/sustainable_architecture/whychoose_sustainable"><li>Sustainable Architecture</li></Link>
+            <Link href="/buildinginfo/modeling"><li>Building Info Modeling</li></Link>
+           <Link href="/architectural_visualization/visualizationkey"><li>Architectural Visualization</li></Link>
+            <Link href='/modern_architectural/mordern_description' ><li>AI-in Architecture</li></Link>
+           <Link href="architectural_workshop/workshop"><li>Architectural Workshop</li></Link>
             </ul>
           </div>
 

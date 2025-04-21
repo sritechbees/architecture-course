@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import App_layout from '@/layout/app_layout';
 import { useRouter } from 'next/router';
+import Image from 'next/image';
 
 const Courses = [
   {
@@ -78,8 +79,8 @@ function Courseslist() {
               >
                 {/* Front Face */}
                 <div className="absolute inset-0 backface-hidden">
-                  <img
-                    src={course.image}
+                  <Image
+                    src={course.image} height={200} width={200}
                     alt={course.title}
                     className="w-full h-full object-cover rounded-2xl opacity-80"
                   />

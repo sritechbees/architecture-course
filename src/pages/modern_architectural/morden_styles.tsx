@@ -20,14 +20,14 @@ function ModernStyles() {
   };
 
   return (
-    <div className="main max-w-7xl mx-auto flex flex-col items-center p-6 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-lg shadow-lg relative">
-      <h2 className="text-2xl font-bold text-white mb-6">Trending Modern Styles</h2>
+    <div className="main max-w-7xl mx-auto py-12  flex flex-col items-center p-6 bg-gray-100 rounded-lg shadow-lg relative">
+      <h2 className="text-4xl font-bold mb-9 text-gray-900 mb-6">Trending<span className='text-yellow-500'> Modern Styles</span> </h2>
       <div className="flex flex-wrap justify-center gap-6">
         {styles.map((style) => (
           <div key={style.id} className="group relative overflow-hidden h-72 w-64 bg-sky-300 rounded-xl flex flex-col items-center">
             <div className="absolute w-56 h-64 bg-gray-50 z-10 top-4 left-4 opacity-50 rounded-2xl blur duration-300 group-hover:blur-none transform rotate-3d(1,-1,1,30deg) duration-500 group-hover:rotate-3d(1,-1,1,0deg)"></div>
             <div className="absolute w-56 h-64 z-10 top-4 left-4 p-3 rounded-2xl flex flex-col justify-end items-start gap-4 transform rotate-3d(1,-1,1,30deg) duration-500 group-hover:rotate-3d(1,-1,1,0deg)">
-              <span className="text-red-800 text-2xl font-extrabold">{style.title}</span>
+              <span className="text-yellow-500 text-2xl font-extrabold">{style.title}</span>
               <p className="text-gray-800 font-bold">{style.description}</p>
               <button 
                 onClick={() => toggleImage(style.id)}

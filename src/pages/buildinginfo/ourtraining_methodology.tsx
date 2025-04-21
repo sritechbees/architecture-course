@@ -1,13 +1,14 @@
+import Image from 'next/image';
 import React from 'react';
 
 function OurTrainingMethodology() {
   return (
-    <section className="w-full bg-gray-50 py-12 px-6 md:px-16">
+    <section className="w-full bg-gray-100 py-12 px-6 md:px-16">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
           {/* Image */}
           <div className="w-full">
-          <img
-            src="/courses/Our Training Methodology.jpg"
+          <Image
+            src="/courses/Our Training Methodology.jpg" height={200} width={200}
             alt="Architecture Training"
             className="rounded-2xl shadow-lg w-full"
           />
@@ -15,8 +16,8 @@ function OurTrainingMethodology() {
 
         {/* Text Content */}
         <div>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-            Our Training Methodology
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
+            <span className='text-yellow-500'>Our Training</span> Methodology
           </h2>
           <p className="text-gray-600 mb-4">
             Our architecture training is built on a hands-on, industry-driven approach. We integrate theoretical foundations with real-world applications to ensure students are job-ready from day one.

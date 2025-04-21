@@ -10,12 +10,12 @@ export default function IntroductionSection() {
   }, []);
 
   return (
-    <section className="bg-[#f1f5f9] py-16 px-6 md:px-20">
+    <section className="bg-[#f1f5f9] py-8 px-6 md:px-20">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
         {/* Text Content */}
         <div data-aos="fade-right">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-            Introduction to Architectural Visualization
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
+            Introduction to <span className='text-yellow-500'>Architectural Visualization</span>
           </h2>
           <p className="text-gray-600 mb-4 leading-relaxed">
             Architectural Visualization is the art of creating realistic imagery to communicate architectural ideas. It blends design, storytelling, and technology to bring blueprints to life before construction begins.

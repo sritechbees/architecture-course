@@ -1,51 +1,83 @@
-import React from "react";
+import React, { useState } from "react";
+import Image from "next/image";
+
+const tips = [
+  {
+    title: "Use Energy-Efficient Materials",
+    description:
+      "Choose materials that reduce energy consumption and improve resource efficiency in buildings, transportation, and more.",
+    image: "/courses/tips1.jpg",
+  },
+  {
+    title: "Maximize Natural Light Materials",
+    description:
+      "Design spaces that utilize natural light through windows and skylights to reduce energy usage and enhance well-being.",
+    image: "/courses/tips1.jpg",
+  },
+  {
+    title: "Incorporate Green Roofs",
+    description:
+      "Green roofs help with insulation, rainwater absorption, and increasing biodiversity in urban areas.",
+    image: "/courses/tips1.jpg",
+  },
+  {
+    title: "Utilize Recycled Materials",
+    description:
+      "Opt for recycled materials in construction to reduce environmental impact and promote circular economy practices.",
+    image: "/courses/tips1.jpg",
+  },
+  {
+    title: "Implement Water Conservation Systems",
+    description:
+      "Integrate rainwater harvesting and low-flow systems to save water and reduce utility costs sustainably.",
+    image: "/courses/tips1.jpg",
+  },
+];
+
 const SustainableTips = () => {
-  const tips = [
-    {
-      title: 'Use Energy-Efficient Materials',
-      description: 'Choose materials that reduce energy consumption and improve resource efficiency in various applications, such as buildings, transportation, and industry, by minimizing energy waste and maximizing performance.',
-      frontBgColor: '#6A2C70',
-      backBgColor: '#F08A5D',
-    },
-    {
-      title: 'Maximize Natural Light Materials',
-      description: 'Design spaces that utilize natural light through strategic placement of windows, skylights, and lighting, reducing the need for artificial lighting while improving well-being.',
-      frontBgColor: '#2E8B57',
-      backBgColor: '#FFD700',
-    },
-    {
-      title: 'Incorporate Green Roofs',
-      description: 'A green roof can help with insulation, absorb rainwater, and promote biodiversity in urban areas by incorporating layers of vegetation, structural support, waterproofing, and water management systems.',
-      frontBgColor: '#3CB371',
-      backBgColor: '#8A2BE2',
-    }
-  ];
+  const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <div className="max-w-6xl mx-auto px-6 py-12">
-      <h2 className="text-4xl font-semibold text-center text-green-600 mb-6">
+    <div className="max-w-7xl mx-auto px-6 py-12">
+      <h2 className="text-3xl font-bold text-center text-yellow-500 mb-10">
         Sustainable Architecture Tips
       </h2>
-      <div className="flex flex-wrap justify-between gap-6">
-        {tips.map((tip, index) => (
-          <div
-            key={index}
-            className="w-full sm:w-[48%] md:w-[32%] lg:w-[30%] bg-white shadow-lg rounded-lg overflow-hidden flex flex-col"
-          >
-            <div className="p-6 flex-grow">
-              <h3 className="text-2xl font-semibold mb-4" style={{ color: tip.frontBgColor }}>
-                {tip.title}
-              </h3>
-              <p className="text-gray-700 text-lg">{tip.description}</p>
-            </div>
-            <div
-              className="bg-gradient-to-r from-[#F08A5D] to-[#F0C808] p-4 text-center flex-shrink-0"
-              style={{ backgroundColor: tip.backBgColor }}
+      <div className="flex flex-col md:flex-row  gap-10">
+        {/* Left Side Titles */}
+        <div className="md:w-1/3 space-y-16">
+          {tips.map((tip, index) => (
+            <button
+              key={index}
+              onClick={() => setActiveIndex(index)}
+              className={`w-full text-left px-4 py-3 rounded-lg font-medium transition-all duration-300 shadow ${
+                activeIndex === index
+                  ? "bg-yellow-400 text-white shadow-lg"
+                  : "bg-white text-gray-800 hover:bg-yellow-100"
+              }`}
             >
-              <p className="text-white font-semibold">Learn More</p>
-            </div>
+              {tip.title}
+            </button>
+          ))}
+        </div>
+
+        {/* Right Side Compact Content */}
+        <div className="md:w-2/3 bg-white rounded-xl shadow-md p-4 flex flex-col gap-4">
+          <h3 className="text-xl font-semibold text-yellow-600">
+            {tips[activeIndex].title}
+          </h3>
+          <p className="text-gray-700 text-base leading-relaxed">
+            {tips[activeIndex].description}
+          </p>
+          <div className="rounded-lg overflow-hidden border-4 border-yellow-500 max-w-md mx-auto">
+            <Image
+              src={tips[activeIndex].image}
+              alt={tips[activeIndex].title}
+              width={300}
+              height={230}
+              className="object-cover w-full h-auto"
+            />
           </div>
-        ))}
+        </div>
       </div>
     </div>
   );

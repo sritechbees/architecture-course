@@ -4,14 +4,9 @@ import React from 'react';
 import App_layout from '@/layout/app_layout';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import KeyFeaturesCard from './Key Features';
-import HandsOnProject from './handson project';
-import ExpertInstructors from './expert_instructors';
-import FlexibleLearningOptions from './flexible_learningoptions';
-import OurTrainingMethodology from './ourtraining_methodology';
-import JobPlacementSupport from './jobplacement_support';
-import WhyChoose from './whychoos';
-import Faq from './faq';
+
+import Link from 'next/link';
+
 
 function Modeling() {
   return (
@@ -35,48 +30,37 @@ function Modeling() {
           {/* Content Box */}
           <div className="relative">
   {/* Background Image */}
-  <div className="absolute">
-    <Image
-      src="/courses/building one.jpg" height={200} width={200} // replace with your image path
-      alt="Background"
-      className=" rounded-3xl"
-    />
-  </div>
+  
 
   {/* Foreground Content */}
   <motion.div
     initial={{ opacity: 0, y: 30 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 1 }}
-    className="relative z-20 bg-white/10 backdrop-blur-md px-10 py-12 rounded-3xl shadow-2xl max-w-3xl text-center border border-white/20 mx-auto"
+    className="relative z-20 bg-white/10  px-10 py-12 rounded-3xl shadow-2xl max-w-3xl text-center border border-white/20 mx-auto"
   >
-    <h1 className="text-4xl md:text-6xl font-bold mb-4 text-yellow-500">
+    <h1 className="text-3xl md:text-5xl font-bold mb-4 text-yellow-500">
       Building Information Modeling
     </h1>
     <p className="text-lg md:text-xl text-gray-900 mb-8">
       Reimagine architecture with intelligent 3D workflows that enhance design, collaboration, and execution.
     </p>
+    <Link href="/buildinginfo/buildinginfo_tech">
     <motion.button
       whileHover={{ scale: 1.08 }}
       whileTap={{ scale: 0.95 }}
-      className="bg-[#1e7551] hover:bg-[#3f715c] text-white px-8 py-3 font-semibold rounded-lg shadow-lg transition-all"
+      className="bg-gray-700 hover:bg-yellow-500 text-white px-8 py-3 font-semibold rounded-lg shadow-lg transition-all"
     >
       Get Started
     </motion.button>
+    </Link>
   </motion.div>
 </div>
 
         </section>
 
-        {/* Feature Sections */}
-        <KeyFeaturesCard />
-        <HandsOnProject />
-        <ExpertInstructors/>
-        <FlexibleLearningOptions/>
-        <OurTrainingMethodology/>
-        <JobPlacementSupport/>
-        <WhyChoose/>
-        <Faq/>
+      
+      
       </App_layout>
     </div>
   );

@@ -8,43 +8,49 @@ const SustainableArchitecture = () => {
     {
       title: "Energy-Efficient Building Design",
       description:
-        "Sustainable architecture focuses on energy-efficient designs that reduce energy consumption, lower operating costs, and minimize carbon emissions.",
+        "Designs that cut energy use, lower costs, and minimize carbon emissions.",
       image: "/courses/Sustainable tips.png",
+      altImage: "/courses/green1.jpg", // new image
       alt: "Energy-Efficient Building Design",
     },
     {
       title: "Green Roofs and Vertical Gardens",
       description:
-        "Green roofs and vertical gardens help improve air quality, reduce heat island effect, and support local biodiversity while enhancing the aesthetic of buildings.",
+        "Improve air quality, reduce heat, and enhance biodiversity with greenery.",
       image: "/courses/Sustainable tips.png",
+      altImage: "/courses/green1.jpg",
       alt: "Green Roofs and Vertical Gardens",
     },
     {
       title: "Sustainable Materials in Construction",
       description:
-        "Choosing sustainable materials like recycled steel, bamboo, and non-toxic paints helps reduce the environmental impact of construction and ensures healthier living spaces.",
+        "Use recycled, renewable, and non-toxic materials for eco-conscious building.",
       image: "/courses/Sustainable tips.png",
+      altImage: "/courses/green1.jpg",
       alt: "Sustainable Materials in Construction",
     },
     {
       title: "Solar Panels for Renewable Energy",
       description:
-        "Incorporating solar panels in architecture not only provides renewable energy but also contributes to lowering the building's carbon footprint and reducing energy costs.",
+        "Utilize solar power to reduce carbon footprints and energy bills.",
       image: "/courses/Sustainable tips.png",
+      altImage: "/courses/green1.jpg",
       alt: "Solar Panels for Renewable Energy",
     },
     {
       title: "Water Conservation and Management",
       description:
-        "Sustainable architecture incorporates water-saving technologies, such as rainwater harvesting systems and low-flow fixtures, to conserve water and reduce utility bills.",
-      image:"/courses/Sustainable tips.png",
+        "Smart plumbing and rainwater systems to minimize water waste.",
+      image: "/courses/Sustainable tips.png",
+      altImage: "/courses/green1.jpg",
       alt: "Water Conservation and Management",
     },
     {
-      title: "Maximizing Natural and Lighting",
+      title: "Maximizing Natural Lighting",
       description:
-        "Designing buildings to maximize natural light reduces the need for artificial lighting, enhances well-being, and creates a healthier indoor environment.",
+        "Enhance interiors with sunlight to reduce electricity usage.",
       image: "/courses/Sustainable tips.png",
+      altImage: "/courses/green1.jpg",
       alt: "Maximizing Natural Lighting",
     },
   ];
@@ -54,43 +60,51 @@ const SustainableArchitecture = () => {
   };
 
   return (
-    <div className="bg-green-500">
-      <div className="mx-auto py-10">
-        <h4 className="font-Akaya text-3xl font-bold text-center py-10 text-white">
-          Sustainable Architecture for a Greener Future
-        </h4>
-        <div className="flex flex-wrap justify-center gap-10">
-          {cards.map((card, index) => (
-            <div
-              key={index}
-              className="w-72 md:w-80 border rounded-lg p-5 bg-white hover:bg-gradient-to-r hover:from-[#a8e6cf] hover:via-[#dcedc1] hover:to-[#ffd54f] hover:text-gray-600 transition-all duration-700 shadow-lg"
-            >
-              <Image
-                className="rounded-lg p-1 bg-white hover:border-white"
-                src={card.image}
-                height={200}
-                width={350}
-                alt={card.alt}
-              />
-              <h3 className="font-bold text-center text-xl py-3 font-Akaya">
-                {card.title}
-              </h3>
-              {visibleIndex === index && (
-                <p className="font-Akaya mt-2">{card.description}</p>
-              )}
-              <div className='flex justify-center'>
-              <button
-                className="mt-3 bg-[#ecc73a] text-white  py-1 px-4 rounded-lg  font-Akaya text-sm hover:bg-[#f1a500] transition-colors duration-300"
-                onClick={() => toggleDescription(index)}
+    <section className="bg-gray-100 py-12 mb-8">
+      <div className="max-w-7xl mx-auto px-6">
+        <h2 className="text-3xl font-bold text-center text-yellow-500 mb-12">
+          <span className='text-gray-900'>Sustainable Architecture</span> for a Greener Future
+        </h2>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {cards.map((card, index) => {
+            const isActive = visibleIndex === index;
+            return (
+              <div
+                key={index}
+                className="bg-white rounded-xl overflow-hidden shadow-xl transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl"
               >
-                {visibleIndex === index ? "Hide" : "Read More"}
-              </button>
-            </div>
-        </div>
-          ))}
+                <div className="relative h-48 w-full">
+                  <Image
+                    src={isActive ? card.altImage : card.image}
+                    alt={card.alt}
+                    layout="fill"
+                    objectFit="cover"
+                    className="rounded-t-xl transition-all duration-500"
+                  />
+                </div>
+                <div className="p-5 flex flex-col">
+                  <h3 className="text-lg font-semibold text-green-700 mb-2">
+                    {card.title}
+                  </h3>
+                  {isActive && (
+                    <p className="text-sm text-gray-600 mb-3 transition-all duration-500">
+                      {card.description}
+                    </p>
+                  )}
+                  <button
+                    onClick={() => toggleDescription(index)}
+                    className="self-start text-sm px-4 py-1 rounded-full bg-yellow-400 text-white hover:bg-yellow-500 transition-colors duration-300"
+                  >
+                    {isActive ? "Hide" : "Read More"}
+                  </button>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

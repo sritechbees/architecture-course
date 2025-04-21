@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import App_layout from "@/layout/app_layout";
 
 const sections = [
   {
@@ -49,7 +48,18 @@ const ModerndesignSection = () => {
   };
 
   return (
-    <div className="max-w-7xl mx-auto py-16 mt-16 p-6 space-y-20">
+    <div className="max-w-7xl mx-auto py-8 p-6 space-y-20">
+      
+      {/* Section Title */}
+      <motion.h2
+        className="text-3xl md:text-4xl font-bold text-center text-yellow-500 mb-12"
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
+      Modern Architecture  <span className="text-gray-900">Course Topics</span> 
+      </motion.h2>
+
       {sections.map((section, index) => (
         <motion.div
           key={index}

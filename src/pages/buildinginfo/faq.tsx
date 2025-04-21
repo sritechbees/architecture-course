@@ -1,94 +1,85 @@
-import React, { useState, useEffect } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import { ChevronDown } from 'lucide-react';
+import React from 'react';
+import { motion } from 'framer-motion';
+import Image from 'next/image';
+import Offer from '@/components/common/offer';
 
 const faqs = [
-  {
-    question: 'What is Building Information Modeling (BIM)?',
-    answer:
-      'BIM is a digital representation of physical and functional characteristics of a facility. It helps architects visualize, simulate, and coordinate every aspect of the design process.',
-  },
-  {
-    question: 'Why should architecture students learn BIM?',
-    answer:
-      'BIM is transforming the architecture industry by enabling smarter design, better collaboration, and faster project delivery. Knowing BIM tools like Revit and Navisworks makes students job-ready.',
-  },
-  {
-    question: 'Is BIM only for large-scale projects?',
-    answer:
-      'No, BIM is beneficial for both small and large projects. It improves accuracy, visualization, and collaboration regardless of the scale.',
-  },
-  {
-    question: 'What software will I learn in this course?',
-    answer:
-      'You will gain hands-on experience with tools like Autodesk Revit, Navisworks, AutoCAD, and BIM 360.',
-  },
-  {
-    question: 'Do I need prior CAD experience to enroll?',
-    answer:
-      'Not at all! The course is designed for both beginners and those with prior design experience.',
-  },
-  {
-    question: 'Is this course suitable for interior designers too?',
-    answer:
-      'Yes, interior designers also benefit from BIM as it allows better integration with architectural designs and precise planning.',
-  },
-  {
-    question: 'Will I receive a certificate after completion?',
-    answer:
-      'Yes, upon successful completion, you’ll receive a professional BIM certification recognized by industry leaders.',
-  },
-];
+    {
+      question: 'What is BIM?',
+      answer: 'BIM stands for Building Information Modeling. It’s a digital process that enhances the design and construction of buildings.',
+    },
+    {
+      question: 'What software will I learn?',
+      answer: 'You’ll master tools like Revit, Navisworks, AutoCAD, and BIM 360.',
+    },
+    {
+      question: 'Do I need prior experience?',
+      answer: 'No prior CAD or BIM experience is required. The course starts from the basics.',
+    },
+    {
+      question: 'Is this course certified?',
+      answer: 'Yes! You will receive an industry-recognized BIM certificate upon completion.',
+    },
+    {
+      question: 'Is this course suitable for interior designers too?',
+      answer: 'Absolutely! Interior designers benefit from BIM through precise planning and integration with architectural elements.',
+    },
+  ];
+  
 
 export default function Faq() {
-  const [activeIndex, setActiveIndex] = useState(null);
-
-  useEffect(() => {
-    AOS.init({ duration: 800 });
-  }, []);
-
-  const toggle = (index:number) => {
-    const [activeIndex, setActiveIndex] = useState<number | null>(null);
-
-  };
-
   return (
-    <section className="bg-[#f9fafb] py-16 px-6 md:px-20">
-      <div className="max-w-5xl mx-auto">
-        <h2
-          className="text-3xl md:text-4xl font-bold text-gray-800 text-center mb-10"
-          data-aos="fade-up"
+    <div>
+    <section className="bg-[#f9fafb] py-2 px-6 md:px-16">
+      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+        {/* Image Section */}
+        <motion.div
+          initial={{ x: -80, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
         >
-          BIM Architecture Course - FAQs
-        </h2>
+          <Image
+            src="/courses/faqimage.jpg" height={200} width={200} // Replace with your image path
+            alt="BIM FAQ"
+            className="w-full rounded-xl shadow-md  border-l-4 border-yellow-400"
+          />
+        </motion.div>
 
-        <div className="space-y-4">
-          {faqs.map((faq, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-xl shadow-md transition p-5 cursor-pointer"
-              onClick={() => toggle(index)}
-              data-aos="fade-up"
-              data-aos-delay={index * 100}
-            >
-              <div className="flex justify-between items-center">
-                <h3 className="text-base md:text-lg font-medium text-gray-800">
+        {/* FAQ Section */}
+        <div>
+          <motion.h2
+            className="text-2xl md:text-3xl font-bold text-gray-800 mt-12 mb-6"
+            initial={{ x: 80, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.7 }}
+            viewport={{ once: true }}
+          >
+           <span className='text-yellow-500'>Frequently Asked</span>  Questions
+          </motion.h2>
+
+          <div className="space-y-6">
+            {faqs.map((faq, index) => (
+              <motion.div
+                key={index}
+                initial={{ x: 80, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ delay: index * 0.15 }}
+                viewport={{ once: true }}
+                className="bg-white p-5 rounded-xl shadow-sm border-l-4 border-yellow-400"
+              >
+                <h4 className="text-lg font-semibold text-gray-800 hover:text-yellow-500 mb-1">
                   {faq.question}
-                </h3>
-                <ChevronDown
-                  className={`w-5 h-5 text-gray-500 transition-transform duration-300 ${
-                    activeIndex === index ? 'rotate-180' : ''
-                  }`}
-                />
-              </div>
-              {activeIndex === index && (
-                <p className="text-gray-600 mt-3 text-sm">{faq.answer}</p>
-              )}
-            </div>
-          ))}
+                </h4>
+                <p className="text-sm text-gray-600 hover:text-yellow-500">{faq.answer}</p>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
+      <Offer/>
     </section>
+   
+    </div>
   );
 }

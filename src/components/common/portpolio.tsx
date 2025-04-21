@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const showcases = [
   {
@@ -36,8 +37,8 @@ function portfolio() {
           transition={{ duration: 0.6, delay: index * 0.3 }}
           viewport={{ once: true }}
         >
-          <img
-            src={item.image}
+          <Image
+            src={item.image} height={200} width={200}
             alt={item.title}
             className="w-full lg:w-1/2 h-72 md:h-96 object-cover rounded-xl shadow-lg"
           />

@@ -1,11 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import App_layout from "@/layout/app_layout";
-import SustainableDescription from "./sustainable_description";
-import SustainableTips from "./sustainabletips";
-import SustainableArchitecture from "./sustainablearchitecture";
-import UrbanDesignSections from "../architectural_workshop/workshopdesignsections";
-import FAQSection from "./faqsection";
+
 import Link from "next/link";
 
 const backgrounds = [

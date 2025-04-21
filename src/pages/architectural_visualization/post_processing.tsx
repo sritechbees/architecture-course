@@ -10,12 +10,12 @@ export default function PostProcessingSection() {
   }, []);
 
   return (
-    <section className="bg-[#f8f9fc] py-16 px-6 md:px-20">
+    <section className="bg-[#f1f5f9] py-8 px-6 md:px-20">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
         {/* Text Content */}
         <div data-aos="fade-left">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Post-Processing & Visualization Enhancement
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+            Post-Processing &<span className='text-yellow-500'> Visualization Enhancement</span> 
           </h2>
           <p className="text-gray-700 mb-4 leading-relaxed">
             Elevate your renders by enhancing them with Photoshop techniques, color grading, and creative effects. Add depth and life to your architectural visuals.
